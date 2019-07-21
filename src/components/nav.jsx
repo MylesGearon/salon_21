@@ -8,8 +8,7 @@ const Nav = props => (
     <div>Link</div>
     <div>Link</div>
     <div>Link</div>
-    <div>Link</div>
-    <div>
+    <div className={styles.emailContainer}>
       <input placeholder="Email" />
       <button >Signup</button>
     </div>
