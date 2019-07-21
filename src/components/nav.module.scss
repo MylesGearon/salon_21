@@ -1,0 +1,15 @@
+@import '../../node_modules/include-media/dist/_include-media.scss';
+
+.container {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 25% 25% 25% 25%;
+  justify-content: center;
+  width: 100vw;
+}
+
+@include media(">phone") {
+  .container {
+    display: none;
+  }
+}

@@ -1,3 +1,9 @@
 import React from "react"
 
-export default () => <div>Test a new push to netlify</div>
+import Nav from '../components/nav';
+
+export default () => (
+  <div>
+    <Nav />
+  </div>
+);

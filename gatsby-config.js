@@ -1,12 +1,13 @@
 module.exports = {
   plugins: [
-    `gatsby-plugin-netlify-cms`,
+    'gatsby-plugin-netlify-cms',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/blog`,
         name: "blog",
       },
-    }
+    },
+    'gatsby-plugin-sass'
   ],
 }
