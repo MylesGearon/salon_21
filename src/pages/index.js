@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import moment from 'moment';
 
 import Nav from '../components/nav';
+import navStyles from '../components/nav.module.scss';
 
 export default ({data}) => {
   const nextConcertEdge = data.allMarkdownRemark.edges.find(({node}) => {
@@ -12,7 +13,11 @@ export default ({data}) => {
   return (
     <div>
       <Nav />
-      <Img fluid={nextConcertEdge.node.frontmatter.landingPageImage.childImageSharp.fluid} />
+      <Img
+        fluid={nextConcertEdge.node.frontmatter.landingPageImage.childImageSharp.fluid}
+        fadeIn={true}
+        className={navStyles.backgroundImage}
+      />
     </div>
   )
 };
@@ -31,7 +36,7 @@ export const pageQuery = graphql`
             landingPageImage {
               childImageSharp {
                 fluid {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }
