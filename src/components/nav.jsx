@@ -6,7 +6,7 @@ import smallLogo from '../assets/logo_black.svg';
 const Nav = props => {
 
   return [
-    <div className={styles.container}>
+    <div className={styles.container} key="menu">
       <img alt="logo" className={styles.logoContainer} src={smallLogo} />
       <div className={styles.hamburger}>hamburger</div>
       <div className={styles.emailContainer}>
@@ -14,7 +14,7 @@ const Nav = props => {
         <button >Signup</button>
       </div>
     </div>,
-    <div className={styles.border}></div>
+    <div className={styles.border} key="border"></div>
   ];
 }
 
