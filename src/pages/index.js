@@ -20,8 +20,12 @@ export const pageQuery = graphql`
           frontmatter {
             title
             datetime
-            landing_page_image {
-              childImageSharp
+            landingPageImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
