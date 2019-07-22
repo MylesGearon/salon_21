@@ -1,19 +1,32 @@
 @import '../../node_modules/include-media/dist/_include-media.scss';
 @import '../styles/variables';
 
+$element-padding: 10;
+
 .container {
-  display: grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 25% 25% 25% 25%;
-  justify-content: center;
-  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
   width: 100vw;
   background-image: url('../assets/background-texture.jpg');
   background-repeat: repeat;
 }
 
 .logo-container {
-  height: 100%;
+  height: calc(100% - #{$element-padding * 2px});
+  padding: $element-padding * 1px;
+}
+
+.hamburger {
+  padding: $element-padding + 0px;
+}
+
+.border {
+  width: 100vw;
+  height: $element-padding + 0px;
+  background-image: url('../assets/border_pattern_horizontal.png');
+  background-size: contain;
 }
 
 @include media("<=tablet") {

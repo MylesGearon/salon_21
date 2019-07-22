@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import Nav from '../components/nav';
 
 export default props => {
-  console.log(props);
   return (
     <div>
       <Nav />
