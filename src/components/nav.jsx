@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import netlifyIdentity from 'netlify-identity-widget';
+import { graphql, StaticQuery } from 'gatsby';
+import Img from "gatsby-image"
 
 import styles from './nav.module.scss';
 
@@ -19,7 +21,7 @@ const Nav = props => {
 
   return (
     <div className={styles.container}>
-      <div>logo</div>
+      <Img fluid={props.file.childImageSharp.fluid} />
       <div>Link</div>
       <div>Link</div>
       <div>Link</div>
@@ -32,4 +34,18 @@ const Nav = props => {
   );
 }
 
-export default Nav;
+export default () => (
+  <StaticQuery query={graphql`
+      query {
+        file(relativePath: { eq: "detail_-3.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={Nav}
+  />
+);

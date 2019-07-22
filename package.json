@@ -14,9 +14,12 @@
   },
   "dependencies": {
     "gatsby": "^2",
+    "gatsby-image": "^2.2.6",
     "gatsby-plugin-netlify-cms": "^4",
     "gatsby-plugin-sass": "^2",
+    "gatsby-plugin-sharp": "^2.2.8",
     "gatsby-source-filesystem": "^2",
+    "gatsby-transformer-sharp": "^2.2.4",
     "include-media": "^1.4.9",
     "netlify-cms": "^2",
     "netlify-identity-widget": "^1.5.5",

@@ -31,3 +31,8 @@ collections:
           valueField: 'title',
           required: true,
         }
+      - {
+          name: landing_page_image,
+          label: Landing Page Image,
+          widget: image
+        }
