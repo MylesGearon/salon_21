@@ -1,7 +1,7 @@
 backend:
-  name: github
-  repo: mylesgearon/salon_21
+  name: git-gateway
 
+publish_mode: editorial_workflow
 media_folder: static/assets
 public_folder: assets
 
@@ -20,6 +20,8 @@ collections:
           collection: artists,
           multiple: true,
           searchFields: ["title"],
+          displayFields: ["title"],
+          valueField: "title",
           required: true,
         }
   - name: artist
