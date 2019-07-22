@@ -1,9 +1,31 @@
 import React from "react"
+import { graphql } from 'gatsby';
 
 import Nav from '../components/nav';
 
-export default () => (
-  <div>
-    <Nav />
-  </div>
-);
+export default props => {
+  console.log(props);
+  return (
+    <div>
+      <Nav />
+    </div>
+  )
+};
+
+export const pageQuery = graphql`
+  query concerts {
+    allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/*/concerts/**/*"}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            datetime
+            landing_page_image {
+              childImageSharp
+            }
+          }
+        }
+      }
+    }
+  }
+`;

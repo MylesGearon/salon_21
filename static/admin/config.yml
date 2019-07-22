@@ -32,7 +32,7 @@ collections:
           required: true,
         }
       - {
-          name: landing_page_image,
+          name: landingPageImage,
           label: Landing Page Image,
           widget: image
         }

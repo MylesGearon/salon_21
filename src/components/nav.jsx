@@ -7,7 +7,7 @@ const Nav = props => {
 
   return (
     <div className={styles.container}>
-      <img className={styles.logoContainer} src={smallLogo} />
+      <img alt="logo" className={styles.logoContainer} src={smallLogo} />
       <div className={styles.emailContainer}>
         <input placeholder="Email" />
         <button >Signup</button>
