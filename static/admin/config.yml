@@ -1,13 +1,20 @@
 backend:
   name: git-gateway
+  # name: test-repo
 
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: concert
-    label: Concert
+  - name: artists
+    label: Artists
+    folder: cms/artists
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string, required: true }
+  - name: concerts
+    label: Concerts
     folder: cms/concerts
     create: true
     fields:
@@ -19,14 +26,8 @@ collections:
           widget: relation,
           collection: artists,
           multiple: true,
-          searchFields: ["title"],
-          displayFields: ["title"],
-          valueField: "title",
+          searchFields: ['title'],
+          displayFields: ['title'],
+          valueField: 'title',
           required: true,
         }
-  - name: artist
-    label: Artist
-    folder: cms/artists
-    create: true
-    fields:
-      - { name: title, label: Title, widget: string, required: true }
