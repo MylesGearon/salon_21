@@ -12,7 +12,11 @@
   background-repeat: repeat;
 }
 
-@include media("<phone") {
+.logo-container {
+  height: 100%;
+}
+
+@include media("<=tablet") {
   .email-container {
     display: none;
   }
