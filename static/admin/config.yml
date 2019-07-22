@@ -3,7 +3,7 @@ backend:
   # name: test-repo
 
 # publish_mode: editorial_workflow
-media_folder: static/assets
+media_folder: cms/assets
 public_folder: assets
 
 collections:
