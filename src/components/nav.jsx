@@ -17,7 +17,7 @@ const Nav = props => {
     >
       <div className={styles.border} key="border"></div>
     </div>,
-    <div className={styles.fixedElements}>
+    <div className={styles.fixedElements} key="button">
       <img alt="logo" className={styles.logoContainer} src={smallLogo} />
       <div className={styles.hamburger} onClick={() => setExpanded(!expanded)}>
         <MenuIconName />
