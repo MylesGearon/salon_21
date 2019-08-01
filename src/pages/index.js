@@ -3,22 +3,21 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import moment from 'moment';
 
-import Nav from '../components/nav';
-import navStyles from '../components/nav.module.scss';
+import AppContainer from '../components/AppContainer';
+import styles from './index.module.scss';
 
 export default ({data}) => {
   const nextConcertEdge = data.allMarkdownRemark.edges.find(({node}) => {
     return moment(node.frontmatter.datetime) > moment();
   });
   return (
-    <div>
-      <Nav />
+    <AppContainer>
       <Img
+        className={styles.img}
         fluid={nextConcertEdge.node.frontmatter.landingPageImage.childImageSharp.fluid}
         fadeIn={true}
-        className={navStyles.backgroundImage}
       />
-    </div>
+    </AppContainer>
   )
 };
 

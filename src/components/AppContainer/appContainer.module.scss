@@ -1,0 +1,8 @@
+@import '../../styles/variables';
+
+.container {
+  position: absolute;
+  top: $mobile-nav-height * 1px;
+  width: 100%;
+  height: calc(100vh - #{$mobile-nav-height * 1px});
+}
