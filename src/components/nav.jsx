@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import { FiMenu } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 import styles from './nav.module.scss';
 import smallLogo from '../assets/logo_black.svg';
 
 const Nav = props => {
   const [expanded, setExpanded] = useState(false);
+  const MenuIconName = expanded ? FiX : FiMenu;
   return [
     <div
       className={`
@@ -19,7 +20,7 @@ const Nav = props => {
     <div className={styles.fixedElements}>
       <img alt="logo" className={styles.logoContainer} src={smallLogo} />
       <div className={styles.hamburger} onClick={() => setExpanded(!expanded)}>
-        <FiMenu />
+        <MenuIconName />
       </div>
     </div>
   ];
