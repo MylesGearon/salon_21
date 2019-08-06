@@ -12,7 +12,7 @@ export default ({data, path}) => {
     return moment(node.frontmatter.datetime) > moment();
   });
   return [
-    <Helmet key='Helmet'>Salon 21</Helmet>,
+    <Helmet key='Helmet'><title>Salon 21</title></Helmet>,
     <AppContainer currentPath={path} key="AppContainer">
       <Img
         className={styles.img}
