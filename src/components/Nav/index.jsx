@@ -11,7 +11,7 @@ const Nav = props => {
   return [
     <div
       className={`
-        ${styles.container}
+        ${styles.background}
         ${expanded ? styles.expanded : ''}
       `}
       key="menu"
