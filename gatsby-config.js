@@ -51,5 +51,17 @@ module.exports = {
     },
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Salon 21`,
+        short_name: `Salon 21`,
+        start_url: `/`,
+        background_color: `#92C6C4`,
+        theme_color: `#92C6C4`,
+        display: `standalone`,
+        icon: `src/assets/small_logo_square.svg`
+      },
+    }
   ],
 }
