@@ -46,15 +46,16 @@ $nav-background-z-index: 2;
   align-items: center;
 
   height: $mobile-fixed-elements-height * 1px;
-  width: calc(100% - #{$element-padding * 2px});
+  width: calc(100% - #{$fixed-element-margin * 2px});
 
-  padding: #{$element-padding * 1px};
+  margin: #{$fixed-element-margin * 1px};
 
   z-index: #{$nav-background-z-index + 1};
 }
 
 .logo-container {
   height: 100%;
+  margin: 0;
 }
 
 .hamburger {
@@ -77,6 +78,14 @@ $top-bottom-margin: $mobile-nav-height * 2;
   margin: $top-bottom-margin * 1px 0;
 }
 
+.link {
+  text-transform: uppercase;
+
+  &.active {
+    color: white;
+  }
+}
+
 @include media(">=desktop") {
   .container {
     top: 0;
@@ -91,7 +100,7 @@ $top-bottom-margin: $mobile-nav-height * 2;
     right: 0;
     background-image: url('../../assets/border_pattern_vertical.png');
     height: 100%;
-    width: $element-padding * 1px;
+    width: $fixed-element-margin * 1px;
   }
 
   .mobile-fixed-elements {

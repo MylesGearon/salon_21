@@ -7,12 +7,13 @@ import { Helmet } from 'react-helmet';
 import AppContainer from '../components/AppContainer';
 import styles from './index.module.scss';
 
-export default ({data}) => {
+export default ({data, path}) => {
   const nextConcertEdge = data.allMarkdownRemark.edges.find(({node}) => {
     return moment(node.frontmatter.datetime) > moment();
   });
   return [
     <Helmet key='Helmet'>Salon 21</Helmet>,
+    <AppContainer currentPath={path} key="AppContainer">
       <Img
         className={styles.img}
         fluid={nextConcertEdge.node.frontmatter.landingPageImage.childImageSharp.fluid}
