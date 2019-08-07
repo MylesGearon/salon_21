@@ -69,7 +69,7 @@ $nav-background-z-index: 2;
   margin-right: 2px;
 }
 
-$top-bottom-margin: $mobile-nav-height * 2;
+$top-bottom-margin: $mobile-nav-height + 30;
 .nav-list {
   display: flex;
   flex-direction: column;
@@ -91,7 +91,7 @@ $top-bottom-margin: $mobile-nav-height * 2;
 }
 
 $border-width: $border-height;
-@include media(">=desktop") {
+@include media(">=tablet") {
   .background {
     top: 0;
     width: $desktop-nav-width * 1px;
@@ -106,12 +106,12 @@ $border-width: $border-height;
   .side-nav-logo {
     display: block;
     margin: 0;
-    padding: 0 10px;
+    padding: 10px;
   }
 
   .nav-list {
-    margin: 10% $border-width * 1px;
-    height: 100%;
+    margin: $border-width * 1px;
+    height: calc(100vh - #{$border-width * 2px});
     width: calc(100% - #{$border-width * 2px});
     justify-content: space-between;
   }

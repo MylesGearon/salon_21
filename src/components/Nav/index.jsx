@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 import styles from './nav.module.scss';
 import smallLogo from '../../assets/logo_black.svg';
+import EmailSignup from '../EmailSignup';
 
 const NavLink = ({ text, linkTo, path, currentPath }) => (
   <Link to={linkTo} className={styles.link + ' ' + (currentPath.match(path) ? styles.active : '')}>
@@ -51,6 +52,7 @@ const Nav = props => {
         {
           links.map((linkProps, index) => <NavLink key={index} currentPath={props.currentPath} {...linkProps} />)
         }
+        <EmailSignup />
       </div>
       <div className={styles.border} key="border" />
     </div>,

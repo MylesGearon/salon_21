@@ -1,0 +1,43 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
+@import '../../styles/variables';
+
+$input-button-height: 40;
+$container-height: $input-button-height * 2.5;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  height: $container-height * 1px;
+}
+
+.input {
+  width: 100%;
+  height: $input-button-height * 1px;
+  border: none;
+  text-align: center;
+  font-weight: bolder;
+}
+
+::placeholder {
+  color: $neutral-gray;
+}
+
+.submit {
+  width: 100%;
+  height: $input-button-height * 1px;
+  background: $accent-yellow;
+  border: none;
+  font-weight: bolder;
+  color: $dark-gray;
+}
+
+@include media(">=tablet") {
+  .container {
+    height: $container-height + 20px;
+    width: 90%;
+    padding: 10px 0 ;
+  }
+}
