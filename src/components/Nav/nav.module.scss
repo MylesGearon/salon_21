@@ -53,9 +53,13 @@ $nav-background-z-index: 2;
   z-index: #{$nav-background-z-index + 1};
 }
 
-.logo-container {
+.top-nav-logo {
   height: 100%;
   margin: 0;
+}
+
+.side-nav-logo {
+  display: none;
 }
 
 .hamburger {
@@ -86,24 +90,43 @@ $top-bottom-margin: $mobile-nav-height * 2;
   }
 }
 
+$border-width: $border-height;
 @include media(">=desktop") {
-  .container {
+  .background {
     top: 0;
     width: $desktop-nav-width * 1px;
 
     transition: none;
   }
 
+  .mobile-fixed-elements {
+    display: none;
+  }
+
+  .side-nav-logo {
+    display: block;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .nav-list {
+    margin: 10% $border-width * 1px;
+    height: 100%;
+    width: calc(100% - #{$border-width * 2px});
+    justify-content: space-between;
+  }
+
   .border {
+    position: absolute;
     top: 0;
-    left: auto;
+    left: $desktop-nav-width * 1px;
     right: 0;
     background-image: url('../../assets/border_pattern_vertical.png');
     height: 100%;
-    width: $fixed-element-margin * 1px;
+    width: $border-width * 1px;
   }
 
-  .mobile-fixed-elements {
-    display: none;
+  .link {
+    margin-bottom: 50px;
   }
 }

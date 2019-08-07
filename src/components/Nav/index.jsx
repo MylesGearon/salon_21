@@ -47,14 +47,15 @@ const Nav = props => {
       key="menu"
     >
       <div className={styles.navList}>
+        <img alt="logo" className={styles.sideNavLogo} src={smallLogo} />
         {
           links.map((linkProps, index) => <NavLink key={index} currentPath={props.currentPath} {...linkProps} />)
         }
       </div>
-      <div className={styles.border} key="border"></div>
+      <div className={styles.border} key="border" />
     </div>,
     <div key="fixed-elements" className={styles.mobileFixedElements}>
-      <img alt="logo" className={styles.logoContainer} src={smallLogo} />
+      <img alt="logo" className={styles.topNavLogo} src={smallLogo} />
       <div className={styles.hamburger} onClick={() => setExpanded(!expanded)}>
         <MenuIconName />
       </div>

@@ -1,3 +1,4 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
 @import '../../styles/variables';
 
 .container {
@@ -5,4 +6,11 @@
   top: $mobile-nav-height * 1px;
   width: 100%;
   height: calc(100vh - #{$mobile-nav-height * 1px});
+}
+
+@include media(">=desktop") {
+  .container {
+    top: auto;
+    height: 100vh;
+  }
 }
