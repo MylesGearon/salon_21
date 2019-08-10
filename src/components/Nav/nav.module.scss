@@ -78,12 +78,14 @@ $top-bottom-margin: $mobile-nav-height + 30;
 
   position: relative;
 
-  height: calc(100% - #{$top-bottom-margin * 2 * 1px});
+  height: calc(100% - #{($top-bottom-margin * 2 - $border-height) * 1px});
   margin: $top-bottom-margin * 1px 0;
 }
 
 .link {
   text-transform: uppercase;
+  font-size: 1.3rem;
+  height: 0;
 
   &.active {
     color: white;
@@ -124,9 +126,5 @@ $border-width: $border-height;
     background-image: url('../../assets/border_pattern_vertical.png');
     height: 100%;
     width: $border-width * 1px;
-  }
-
-  .link {
-    margin-bottom: 50px;
   }
 }

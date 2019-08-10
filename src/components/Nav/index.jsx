@@ -7,8 +7,8 @@ import smallLogo from '../../assets/logo_black.svg';
 import EmailSignup from '../EmailSignup';
 
 const NavLink = ({ text, linkTo, path, currentPath }) => (
-  <Link to={linkTo} className={styles.link + ' ' + (currentPath.match(path) ? styles.active : '')}>
-    <h4>{text}</h4>
+  <Link to={linkTo}>
+    <h4 className={styles.link + ' ' + (currentPath.match(path) ? styles.active : '')}>{text}</h4>
   </Link>
 );
 
