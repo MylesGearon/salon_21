@@ -1,25 +1,22 @@
-import React, { useEffect } from 'react';
-import netlifyIdentity from 'netlify-identity-widget';
+import React, { useEffect } from "react"
+import netlifyIdentity from "netlify-identity-widget"
 
 const handleAdminClick = () => {
   if (netlifyIdentity.currentUser()) {
-    window.location.href = `${window.location.origin}/admin`;
+    window.location.href = `${window.location.origin}/admin`
   } else {
-    netlifyIdentity.open();
+    netlifyIdentity.open()
   }
 }
 
 export default () => {
   useEffect(() => {
-    netlifyIdentity.init({container: '#identity-service'});
+    netlifyIdentity.init({ container: "#identity-service" })
   }, [null])
 
   return (
-    <button
-      id="identity-service"
-      onClick={handleAdminClick}
-    >
+    <button id="identity-service" onClick={handleAdminClick}>
       Login with Netlify Identity
     </button>
   )
-};
+}
