@@ -8,7 +8,7 @@
   height: calc(100vh - #{$mobile-nav-height * 1px});
 }
 
-@include media(">=desktop") {
+@include media(">=tablet") {
   .container {
     top: auto;
     height: 100vh;
