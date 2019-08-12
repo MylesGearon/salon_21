@@ -1,4 +1,5 @@
 import React from "react"
+import _ from 'lodash';
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import moment from "moment"
@@ -8,9 +9,12 @@ import AppContainer from "../components/AppContainer"
 import styles from "./index.module.scss"
 
 export default ({ data, path }) => {
-  const nextConcertEdge = data.allMarkdownRemark.edges.find(({ node }) => {
-    return moment(node.frontmatter.datetime) > moment()
-  })
+  const nextConcert = _.maxBy(data.allMarkdownRemark.edges, ({ node }) => (
+    moment(node.frontmatter.datetime)
+  ));
+  // const nextConcertEdge = data.allMarkdownRemark.edges.find(({ node }) => {
+  //   return moment(node.frontmatter.datetime) > moment();
+  // });
   return [
     <Helmet key="Helmet">
       <title>Salon 21</title>
@@ -19,7 +23,7 @@ export default ({ data, path }) => {
       <Img
         className={styles.img}
         fluid={
-          nextConcertEdge.node.frontmatter.landingPageImage.childImageSharp
+          nextConcert.node.frontmatter.landingPageImage.childImageSharp
             .fluid
         }
         fadeIn={true}
@@ -32,7 +36,6 @@ export const pageQuery = graphql`
   query concerts {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { glob: "**/*/concerts/**/*" } }
-      sort: { fields: frontmatter___datetime, order: ASC }
     ) {
       edges {
         node {
