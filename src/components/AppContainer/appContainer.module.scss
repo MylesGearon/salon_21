@@ -11,6 +11,8 @@
 @include media(">=tablet") {
   .container {
     top: auto;
+    left: $desktop-nav-width * 1px;
+    width: calc(100% - #{$desktop-nav-width * 1px});
     height: 100vh;
   }
 }

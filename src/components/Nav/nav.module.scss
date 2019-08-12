@@ -114,14 +114,14 @@ $border-width: $border-height;
   .nav-list {
     margin: $border-width * 1px;
     height: calc(100vh - #{$border-width * 2px});
-    width: calc(100% - #{$border-width * 2px});
+    width: calc(100% - #{$border-width * 3px});
     justify-content: space-between;
   }
 
   .border {
     position: absolute;
     top: 0;
-    left: $desktop-nav-width * 1px;
+    left: #{$desktop-nav-width - $border-width * 1px};
     right: 0;
     background-image: url('../../assets/border_pattern_vertical.png');
     height: 100%;
