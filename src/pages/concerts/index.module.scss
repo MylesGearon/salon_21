@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  height: auto;
+
+  background-color: #EEE;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jump-to {
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0); // transparent
+}

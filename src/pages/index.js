@@ -12,9 +12,7 @@ export default ({ data, path }) => {
   const nextConcert = _.maxBy(data.allMarkdownRemark.edges, ({ node }) => (
     moment(node.frontmatter.datetime)
   ));
-  // const nextConcertEdge = data.allMarkdownRemark.edges.find(({ node }) => {
-  //   return moment(node.frontmatter.datetime) > moment();
-  // });
+  
   return [
     <Helmet key="Helmet">
       <title>Salon 21</title>

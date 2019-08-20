@@ -1,0 +1,46 @@
+.container {
+  height: 400px;
+  width: 350px;
+  margin: 15px 0;
+
+  background-image: url('../../assets/background-texture.jpg');
+  background-repeat: repeat;
+
+  overflow: hidden;
+}
+
+.img {
+  height: 60%;
+}
+
+$title-container-width: 75;
+.title-container {
+  position: relative;
+  float: right;
+  height: auto;
+
+  width: $title-container-width * 1%;
+  top: -10%;
+  padding: 15px;
+
+  color: white;
+  background-color: black;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.artists {
+  margin-bottom: 0;
+}
+
+.date {
+  position: relative;
+  float: left;
+  height: auto;
+
+  width: #{(100 - $title-container-width) * 1%};
+  text-align: center;
+  margin-top: 15px;
+}

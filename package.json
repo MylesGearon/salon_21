@@ -13,6 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "fitty": "^2.2.6",
     "gatsby": "^2",
     "gatsby-image": "^2.2.6",
     "gatsby-plugin-manifest": "^2.2.5",
