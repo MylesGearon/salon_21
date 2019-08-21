@@ -7,11 +7,10 @@ import styles from './index.module.scss';
 import ConcertCard from './ConcertCard';
 
 const ConcertIndex = ({ data, path }) => {
-
   return (
     <Fragment>
       <Helmet><title>Concerts</title></Helmet>
-      <AppContainer currentPath={path} className={styles.container}>
+      <AppContainer currentPath={path}>
         <div className={styles.header}>
           <h1>CONCERTS</h1>
           <select className={styles.jumpTo}>
@@ -24,7 +23,7 @@ const ConcertIndex = ({ data, path }) => {
       </AppContainer>
     </Fragment>
   );
-}
+};
 
 export const pageQuery = graphql`
   query concertsIndex {

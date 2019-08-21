@@ -8,7 +8,7 @@ import styles from './appContainer.module.scss';
 const AppContainer = ({children, currentPath, className}) => (
   <div>
     <Nav currentPath={currentPath} />
-    <div className={styles.container + ' ' + className}>
+    <div className={styles.container}>
       {children}
     </div>
   </div>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import _ from 'lodash';
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -12,26 +12,28 @@ export default ({ data, path }) => {
   const nextConcert = _.maxBy(data.allMarkdownRemark.edges, ({ node }) => (
     moment(node.frontmatter.datetime)
   ));
-  
-  return [
-    <Helmet key="Helmet">
-      <title>Salon 21</title>
-    </Helmet>,
-    <AppContainer currentPath={path} key="AppContainer">
-      <Img
-        className={styles.img}
-        fluid={
-          nextConcert.node.frontmatter.landingPageImage.childImageSharp
-            .fluid
-        }
-        fadeIn={true}
-      />
-    </AppContainer>,
-  ]
+
+  return (
+    <Fragment>
+      <Helmet key="Helmet">
+        <title>Salon 21</title>
+      </Helmet>
+      <AppContainer currentPath={path} key="AppContainer">
+        <Img
+          className={styles.img}
+          fluid={
+            nextConcert.node.frontmatter.landingPageImage.childImageSharp
+              .fluid
+          }
+          fadeIn={true}
+        />
+      </AppContainer>
+    </Fragment>
+  );
 }
 
 export const pageQuery = graphql`
-  query concerts {
+  query landingPage {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { glob: "**/*/concerts/**/*" } }
     ) {
