@@ -19,7 +19,9 @@ const ConcertIndex = ({ data, path }) => {
             <option>Nov 2019</option>
           </select>
         </div>
-        {data.allMarkdownRemark.edges.map(edge => <ConcertCard key={edge} concert={edge} />)}
+        {data.allMarkdownRemark.edges.map(edge => (
+          <ConcertCard key={edge.node.frontmatter.title} concert={edge} />
+        ))}
       </AppContainer>
     </Fragment>
   );
