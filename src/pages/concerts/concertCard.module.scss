@@ -14,6 +14,8 @@ $title-container-translation: $date-margin * -3;
   width: 85%;
   min-height: 350px;
 
+  overflow: hidden;
+
   background-image: url('../../assets/background-texture.jpg');
   background-repeat: repeat;
 }
@@ -26,11 +28,13 @@ $title-container-translation: $date-margin * -3;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
 
   margin-bottom: $title-container-translation * 1px;
 }
 
 .title-container {
+  flex-grow: 2;
   padding: 15px;
   max-width: calc(100% - #{70 + $date-margin * 2px});
 
@@ -48,12 +52,31 @@ $title-container-translation: $date-margin * -3;
   }
 }
 
-.date {
+.date-container {
   text-align: center;
   font-family: "Mission Gothic";
 
   margin: $date-margin * 1px;
   min-width: 70px;
+
+  .date-number {
+    text-shadow: black 0 0 5px;
+    margin: 0;
+    line-height: 1;
+    font-size: 2em;
+
+    color: $accent-pink;
+  }
+
+  .date-break {
+    line-height: 0;
+  }
+
+  .dateMonth {
+    margin: 0;
+    margin-top: -5px;
+    line-height: 0;
+  }
 }
 
 .button-container {

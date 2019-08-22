@@ -35,11 +35,11 @@ const ConcertCard = ({concert}) => {
         className={styles.img}
       />
       <div className={styles.concertInfoRow}>
-        <h4 className={styles.date}>
-          {moment(datetime).format('MMM Do')}
-          <br />
-          {moment(datetime).format('YYYY')}
-        </h4>
+        <div className={styles.dateContainer}>
+          <h3 className={styles.dateNumber}>{concert.parsedDate.format('D')}</h3>
+          <br className={styles.dateBreak} />
+          <h4 className={styles.dateMonth}>{concert.parsedDate.format('MMMM')}</h4>
+        </div>
         <div className={styles.titleContainer}>
           <h2 className={styles.title}>{title}</h2>
           <br />
