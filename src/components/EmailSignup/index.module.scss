@@ -1,7 +1,6 @@
 @import '../../../node_modules/include-media/dist/_include-media.scss';
 @import '../../styles/variables';
 
-$input-button-height: 40;
 $container-height: $input-button-height * 2.5;
 
 .container {
@@ -26,11 +25,9 @@ $container-height: $input-button-height * 2.5;
 }
 
 .submit {
+  @include button-defaults;
   width: 100%;
-  height: $input-button-height * 1px;
   background: $accent-yellow;
-  border: none;
-  font-weight: bolder;
   color: $dark-gray;
 }
 
