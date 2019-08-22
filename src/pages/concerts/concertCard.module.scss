@@ -1,8 +1,7 @@
 @import '../../../node_modules/include-media/dist/_include-media.scss';
 @import '../../styles/variables';
 
-$date-margin: 12;
-$title-container-translation: $date-margin * -3;
+$default-margin: 15;
 
 .container {
   display: flex;
@@ -24,75 +23,92 @@ $title-container-translation: $date-margin * -3;
   max-height: 32vh;
 }
 
-.concert-info-row {
+.concert-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-
-  // margin-bottom: $title-container-translation * 1px;
-}
-
-.title-container {
-  flex-grow: 2;
-  max-width: calc(100% - #{70 + $date-margin * 2px});
-
-  color: white;
-  background-color: black;
-
-  transform: translateY(#{$title-container-translation * 1px});
-
-  .title {
-    margin: 15px;
-    text-transform: uppercase;
-  }
 }
 
 .date-container {
   text-align: center;
   font-family: "Mission Gothic";
 
-  margin: $date-margin * 1px;
-  width: 70px;
+  margin: $default-margin * 1px;
+  padding: 10px;
+  width: 60px;
+
+  border: 1px solid black;
+  border-radius: 2px;
 
   &>* {
     margin: 0;
   }
 
-  .date-number {
-    text-shadow: black 0 0 5px;
-    line-height: 1;
-    font-size: 2em;
-
-    color: $accent-yellow;
+  .date-month {
+    margin-top: -15px;
   }
+}
 
-  .date-break {
-    line-height: 0;
-  }
+.title-positioner {
+  width: 100%;
+  height: 0;
+  position: relative;
 
-  .dateMonth {
-    margin-top: -10px;
-    line-height: .2;
-  }
+  .title-container {
+    position: absolute;
+    right: 0;
 
-  .dateTime {
-    line-height: 0;
+    transform: translateY(-130%);
+
+    text-align: left;
+    color: white;
+    background-color: black;
+
+    .title {
+      margin: 15px;
+      text-transform: uppercase;
+    }
   }
+}
+
+.details {
+  margin: #{$default-margin * 1px};
+  text-align: right;
+   &>* {
+     margin: 0;
+   }
+}
+
+.location {
+  text-decoration: underline;
 }
 
 .button-container {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  margin-top: 20px;
 }
 
 .button {
   @include button-defaults;
 
-  width: calc(100% - #{$date-margin * 2px});
-  margin: $date-margin * 1px;
+  width: calc(100% - #{$default-margin * 2px});
+  margin: $default-margin * 1px;
+  margin-top: 0;
+
+  transition: box-shadow .5s;
+  &:hover {
+    box-shadow: 0 0 5px gray;
+  }
+}
+
+.details-button {
+  background: $neutral-gray;
+}
+
+.buy-button {
+  background: $accent-yellow;
 }
 
 @include media(">=tablet") {

@@ -14,4 +14,7 @@ $input-button-height: 40;
   height: $input-button-height * 1px;
   border: none;
   font-weight: bolder;
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
 }
