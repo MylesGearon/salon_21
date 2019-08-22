@@ -34,13 +34,18 @@ const ConcertCard = ({concert}) => {
         fadeIn={true}
         className={styles.img}
       />
-      <div className={styles.titleContainer}>
-        <h2 className={styles.title}>{title}</h2>
-        <h3 className={styles.artists}>{artists}</h3>
-      </div>
       <p className={styles.date}>
         {moment(datetime).format('MMM Do YYYY')}
       </p>
+      <div className={styles.titleContainer}>
+        <h2 className={styles.title}>{title}</h2>
+        <br />
+        <h3 className={styles.artists}>{artists}</h3>
+      </div>
+      <div className={styles.buttonContainer}>
+        <button className={[styles.button, styles.detailsButton].join(' ')} >Details</button>
+        <button className={[styles.button, styles.butButton].join(' ')} >Buy Now</button>
+      </div>
     </div>
   );
 }

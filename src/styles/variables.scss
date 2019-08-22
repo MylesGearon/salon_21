@@ -3,6 +3,15 @@ $accent-yellow: #FFCA6A;
 $accent-pink: #FBCCCF;
 $neutral-gray: #D3D3D3;
 $dark-gray: #5A5A5A;
+$background-gray: #EEE;
 
 $mobile-nav-height: 70;
 $desktop-nav-width: 220;
+
+$input-button-height: 40;
+
+@mixin button-defaults {
+  height: $input-button-height * 1px;
+  border: none;
+  font-weight: bolder;
+}
