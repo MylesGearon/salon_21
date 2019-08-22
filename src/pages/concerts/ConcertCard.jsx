@@ -20,10 +20,8 @@ const ConcertCard = ({concert}) => {
 
   useEffect(() => {
     fitty(`.${styles.title}`, {
-      maxSize: 24
-    });
-    fitty(`.${styles.artists}`, {
-      maxSize: 16
+      maxSize: 24,
+      minSize: 20
     });
   });
 
@@ -42,8 +40,6 @@ const ConcertCard = ({concert}) => {
         </div>
         <div className={styles.titleContainer}>
           <h2 className={styles.title}>{title}</h2>
-          <br />
-          <h3 className={styles.artists}>{artists}</h3>
         </div>
       </div>
       <div className={styles.buttonContainer}>

@@ -30,12 +30,11 @@ $title-container-translation: $date-margin * -3;
   justify-content: space-between;
   align-items: flex-start;
 
-  margin-bottom: $title-container-translation * 1px;
+  // margin-bottom: $title-container-translation * 1px;
 }
 
 .title-container {
   flex-grow: 2;
-  padding: 15px;
   max-width: calc(100% - #{70 + $date-margin * 2px});
 
   color: white;
@@ -44,11 +43,8 @@ $title-container-translation: $date-margin * -3;
   transform: translateY(#{$title-container-translation * 1px});
 
   .title {
-    margin-bottom: 10px;
-  }
-
-  .artists {
-    margin-bottom: 0;
+    margin: 15px;
+    text-transform: uppercase;
   }
 }
 
@@ -57,15 +53,18 @@ $title-container-translation: $date-margin * -3;
   font-family: "Mission Gothic";
 
   margin: $date-margin * 1px;
-  min-width: 70px;
+  width: 70px;
+
+  &>* {
+    margin: 0;
+  }
 
   .date-number {
     text-shadow: black 0 0 5px;
-    margin: 0;
     line-height: 1;
     font-size: 2em;
 
-    color: $accent-pink;
+    color: $accent-yellow;
   }
 
   .date-break {
@@ -73,8 +72,11 @@ $title-container-translation: $date-margin * -3;
   }
 
   .dateMonth {
-    margin: 0;
-    margin-top: -5px;
+    margin-top: -10px;
+    line-height: .2;
+  }
+
+  .dateTime {
     line-height: 0;
   }
 }

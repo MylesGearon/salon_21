@@ -24,7 +24,9 @@ $header-height: 60;
 .jump-to {
   width: fit-content;
   padding: 3px;
-  background-color: white; // transparent
+  background-color: rgba(0, 0, 0, 0); // transparent
+  border: none !important;
+  border-bottom: 1px solid black !important;
 }
 
 .body {
