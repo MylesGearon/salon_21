@@ -45,9 +45,15 @@ const ConcertIndex = ({ data, path }) => {
       <AppContainer currentPath={path}>
         <div className={styles.header}>
           <h1 className={styles.pageTitle}>CONCERTS</h1>
-          <select className={styles.jumpTo}>
+          <select
+            className={styles.jumpTo}
+            onChange={e => window.scrollTo(
+              0,
+              document.getElementById(e.target.value).getBoundingClientRect().top
+            )}
+          >
             {groupedConcerts.map(([month, concerts]) => (
-              <option key={month}>
+              <option key={month} value={month}>
                 {moment(month, 'YYYY MM').add(1, 'month').format('MMM YYYY')}
               </option>
             ))}
