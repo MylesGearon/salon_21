@@ -1,61 +1,67 @@
 @import '../../styles/variables';
 
-$card-margin: 12;
-$title-container-width: 75;
-$title-container-translation: $card-margin * -3;
+$date-margin: 12;
+$title-container-translation: $date-margin * -3;
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 15px;
+
   width: 85%;
-  margin: 15px 0;
+  min-height: 350px;
 
   background-image: url('../../assets/background-texture.jpg');
   background-repeat: repeat;
 }
 
 .img {
-  height: 220px;
+  max-height: 32vh;
+}
+
+.concert-info-row {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: $title-container-translation * 1px;
 }
 
 .title-container {
-  float: right;
-
-  width: $title-container-width * 1%;
+  flex-grow: 2;
   padding: 15px;
+  max-width: calc(100% - #{70 + $date-margin * 2px});
 
   color: white;
   background-color: black;
 
   transform: translateY(#{$title-container-translation * 1px});
-}
 
-.title {
-  margin-bottom: 10px;
-}
+  .title {
+    margin-bottom: 10px;
+  }
 
-.artists {
-  margin-bottom: 0;
+  .artists {
+    margin-bottom: 0;
+  }
 }
 
 .date {
-  float: left;
-
-  width: calc(#{(100 - $title-container-width) * 1%} - #{$card-margin * 2px});
   text-align: center;
-  margin: $card-margin * 1px;
+  margin: $date-margin * 1px;
+  min-width: 70px;
 }
 
 .buttonContainer {
   display: flex;
   justify-content: space-around;
   width: 100%;
-
-  transform: translateY(#{$title-container-translation * 1px});
-  margin-bottom: $title-container-translation * 1px;
 }
 
 .button {
   @include button-defaults;
 
-  width: calc(100% - #{$card-margin * 2px});
-  margin: $card-margin * 1px;
+  width: calc(100% - #{$date-margin * 2px});
+  margin: $date-margin * 1px;
 }
