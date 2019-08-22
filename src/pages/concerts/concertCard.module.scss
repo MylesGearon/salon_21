@@ -1,3 +1,4 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
 @import '../../styles/variables';
 
 $date-margin: 12;
@@ -24,12 +25,12 @@ $title-container-translation: $date-margin * -3;
 .concert-info-row {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
   margin-bottom: $title-container-translation * 1px;
 }
 
 .title-container {
-  flex-grow: 2;
   padding: 15px;
   max-width: calc(100% - #{70 + $date-margin * 2px});
 
@@ -49,14 +50,17 @@ $title-container-translation: $date-margin * -3;
 
 .date {
   text-align: center;
+  font-family: "Mission Gothic";
+
   margin: $date-margin * 1px;
   min-width: 70px;
 }
 
-.buttonContainer {
+.button-container {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  margin-top: 20px;
 }
 
 .button {
@@ -64,4 +68,9 @@ $title-container-translation: $date-margin * -3;
 
   width: calc(100% - #{$date-margin * 2px});
   margin: $date-margin * 1px;
+}
+
+@include media(">=tablet") {
+  .button {
+  }
 }

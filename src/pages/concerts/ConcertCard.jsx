@@ -35,11 +35,11 @@ const ConcertCard = ({concert}) => {
         className={styles.img}
       />
       <div className={styles.concertInfoRow}>
-        <p className={styles.date}>
+        <h4 className={styles.date}>
           {moment(datetime).format('MMM Do')}
           <br />
           {moment(datetime).format('YYYY')}
-        </p>
+        </h4>
         <div className={styles.titleContainer}>
           <h2 className={styles.title}>{title}</h2>
           <br />

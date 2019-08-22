@@ -5,7 +5,7 @@ $mobile-fixed-elements-height: 35;
 $fixed-element-margin: ($mobile-nav-height - $mobile-fixed-elements-height) / 3;
 $border-height: $fixed-element-margin;
 
-$nav-background-z-index: 2;
+$nav-background-z-index: 3;
 
 .background {
   height: 100vh;
