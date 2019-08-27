@@ -1,5 +1,12 @@
 module.exports = {
   plugins: [
+    { // MUST BE FIRST!!!
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/cms/assets`,
+        name: "uploads",
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -27,13 +34,6 @@ module.exports = {
           },
         ]
       }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/cms/assets`,
-        name: "uploads",
-      },
     },
     {
       resolve: `gatsby-source-filesystem`,
