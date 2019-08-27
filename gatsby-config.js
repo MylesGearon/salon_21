@@ -7,8 +7,8 @@ module.exports = {
         name: "uploads",
       },
     },
-    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-typography`,
       options: {
