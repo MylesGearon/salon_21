@@ -7,12 +7,15 @@ media_folder: cms/assets
 public_folder: assets
 
 collections:
-  - name: artists
-    label: Artists
-    folder: cms/artists
+  - name: locations
+    label: Locations
+    folder: cms/locations
     create: true
     fields:
       - { name: title, label: Title, widget: string, required: true }
+      - { name: google_maps_location, label: Google Maps Iframe Src, widget: string }
+      - { name: address1, label: Address Line 1, widget: string }
+      - { name: address2, label: Address Line 2, widget: string }
   - name: concerts
     label: Concerts
     folder: cms/concerts
@@ -21,15 +24,15 @@ collections:
       - { name: title, label: Title, widget: string, required: true }
       - { name: datetime, label: Time, widget: datetime, required: true }
       - {
-          name: artists,
-          label: Artists,
+          name: location,
+          label: Location,
           widget: relation,
-          collection: artists,
-          multiple: true,
+          collection: locations,
+          multiple: false,
           searchFields: ['title'],
           displayFields: ['title'],
           valueField: 'title',
-          required: true,
+          required: true
         }
       - {
           name: landscapeImage,
@@ -41,3 +44,27 @@ collections:
           label: Portrait Image,
           widget: image
         }
+      - name: artists
+        label: Artists
+        widget: "list"
+        fields:
+          - label: Name
+            name: name
+            widget: "string"
+            required: true
+          - label: Instrument
+            name: instrument
+            widget: string
+
+
+      # - {
+      #     name: program_items,
+      #     label: "Program Items",
+      #     widget: "list"
+      #     fields:
+      #       - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
+      #   }
+      #     fields:
+      #       - { label: 'title', name: 'Title', widget: 'string', required: true }
+      #       # - { label: composer, name: Composer, widget: string, required: true }
+      #   }

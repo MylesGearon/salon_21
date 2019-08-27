@@ -33,12 +33,10 @@ exports.createPages = ({ actions, graphql }) => {
     const concerts = result.data.allMarkdownRemark.edges;
 
     concerts.forEach(edge => {
-      console.log(`concerts/${_.snakeCase(edge.node.frontmatter.title)}`)
-      console.log(edge)
       const id = edge.node.id
       createPage({
         path: `concerts/${_.snakeCase(edge.node.frontmatter.title)}`,
-        component: path.resolve('src/templates/concert.jsx'),
+        component: path.resolve('src/pages/concert/index.jsx'),
         context: { title: edge.node.frontmatter.title },
       })
     });
