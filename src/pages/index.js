@@ -41,6 +41,10 @@ export const pageQuery = graphql`
           frontmatter {
             title
             datetime
+            artists {
+              name
+              instrument
+            }
             landscapeImage {
               childImageSharp {
                 fluid {

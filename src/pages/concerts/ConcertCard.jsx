@@ -13,7 +13,8 @@ const ConcertCard = ({concert}) => {
         landscapeImage,
         title,
         artists,
-        datetime
+        datetime,
+        location
       }
     }
   } = concert;
@@ -48,11 +49,9 @@ const ConcertCard = ({concert}) => {
           </div>
           <div className={styles.details}>
             <p>
-              {concert.parsedDate.format('h:sA')} at <a className={styles.location} target="_blank" href="https://maps.google.com">The Westin Gallery</a>
+              {concert.parsedDate.format('h:sA')} at {location}
             </p>
-            <p className={styles.artists}>
-              {artists.join(', ')}
-            </p>
+            {artists.map(({name, instrument}) => <p>{name}, <i>{instrument}</i></p>)}
           </div>
         </div>
         <div className={styles.buttonContainer}>
@@ -67,7 +66,15 @@ const ConcertCard = ({concert}) => {
 ConcertCard.propTypes = {
   concert: p.shape({
     node: p.shape({
-
+      frontmatter: p.shape({
+        landscapeImage: p.object.isRequired,
+        title: p.string.isRequired,
+        artists: p.arrayOf(p.shape({
+          name: p.string.isRequired,
+          instrument: p.string.isRequired
+        })),
+        datetime: p.string.isRequired
+      })
     })
   })
 };
