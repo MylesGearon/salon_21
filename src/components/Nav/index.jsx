@@ -29,9 +29,9 @@ const links = [
     path: /\/about/
   },
   {
-    text: 'Donate',
-    linkTo: '/donate',
-    path: /\/donate/
+    text: 'Support',
+    linkTo: '/support',
+    path: /\/support/
   },
 ]
 
