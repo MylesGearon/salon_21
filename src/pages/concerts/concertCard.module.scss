@@ -20,7 +20,8 @@ $default-margin: 15;
 }
 
 .img {
-  max-height: 32vh;
+  max-height: 40vh;
+  min-height: 200px;
 }
 
 .concert-info {
@@ -87,7 +88,6 @@ $default-margin: 15;
 .button-container {
   display: flex;
   justify-content: space-around;
-  width: 100%;
 }
 
 .button {
@@ -111,7 +111,37 @@ $default-margin: 15;
   background: $accent-yellow;
 }
 
+.artists {
+  margin-top: $default-margin * 1px;
+}
+
 @include media(">=tablet") {
   .button {
+  }
+}
+
+@include media(">=desktop") {
+  .container {
+    max-width: 750px;
+  }
+
+  .bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .details {
+    text-align: left;
+  }
+
+  .button-container {
+    align-items: center;
+  }
+
+  .button {
+    width: 150px;
+    margin-bottom: 0;
   }
 }

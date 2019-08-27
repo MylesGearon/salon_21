@@ -31,10 +31,9 @@ $header-height: 60;
   flex-direction: column;
   align-items: center;
 
-  height: 100%;
   width: 100%;
 
-  margin-top: $header-height * 1px;
+  padding: $header-height * 1px 0;
 
   background-color: $background-gray;
 }

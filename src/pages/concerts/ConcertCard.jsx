@@ -10,7 +10,7 @@ const ConcertCard = ({concert}) => {
   const {
     node: {
       frontmatter: {
-        landingPageImage,
+        landscapeImage,
         title,
         artists,
         datetime
@@ -29,7 +29,7 @@ const ConcertCard = ({concert}) => {
     <div className={styles.container}>
       <div>
         <Img
-          fluid={landingPageImage.childImageSharp.fluid}
+          fluid={landscapeImage.childImageSharp.fluid}
           fadeIn={true}
           className={styles.img}
         />
@@ -39,27 +39,26 @@ const ConcertCard = ({concert}) => {
           </div>
         </div>
       </div>
-      <div className={styles.concertInfo}>
-        <div className={styles.dateContainer}>
-          <h3 className={styles.dateNumber}>{concert.parsedDate.format('D')}</h3>
-          <br className={styles.dateBreak} />
-          <h4 className={styles.dateMonth}>{concert.parsedDate.format('MMM')}</h4>
+      <div className={styles.bottomContainer}>
+        <div className={styles.concertInfo}>
+          <div className={styles.dateContainer}>
+            <h3 className={styles.dateNumber}>{concert.parsedDate.format('D')}</h3>
+            <br className={styles.dateBreak} />
+            <h4 className={styles.dateMonth}>{concert.parsedDate.format('MMM')}</h4>
+          </div>
+          <div className={styles.details}>
+            <p>
+              {concert.parsedDate.format('h:sA')} at <a className={styles.location} target="_blank" href="https://maps.google.com">The Westin Gallery</a>
+            </p>
+            <p className={styles.artists}>
+              {artists.join(', ')}
+            </p>
+          </div>
         </div>
-        <div className={styles.details}>
-          <p>
-            {concert.parsedDate.format('h:sA')} at <a className={styles.location} target="_blank" href="https://maps.google.com">The Westin Gallery</a>
-          </p>
-          {artists.map(artist => (
-            <Fragment>
-              <br />
-              {artist}
-            </Fragment>
-          ))}
+        <div className={styles.buttonContainer}>
+          <button className={[styles.button, styles.detailsButton].join(' ')} >Details</button>
+          <button className={[styles.button, styles.buyButton].join(' ')} >Buy Now</button>
         </div>
-      </div>
-      <div className={styles.buttonContainer}>
-        <button className={[styles.button, styles.detailsButton].join(' ')} >Details</button>
-        <button className={[styles.button, styles.buyButton].join(' ')} >Buy Now</button>
       </div>
     </div>
   );

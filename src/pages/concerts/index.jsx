@@ -87,7 +87,7 @@ export const pageQuery = graphql`
             title
             datetime
             artists
-            landingPageImage {
+            landscapeImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_tracedSVG

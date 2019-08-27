@@ -32,7 +32,12 @@ collections:
           required: true,
         }
       - {
-          name: landingPageImage,
-          label: Landing Page Image,
+          name: landscapeImage,
+          label: Landscape Image,
+          widget: image
+        }
+      - {
+          name: portraitImage,
+          label: Portrait Image,
           widget: image
         }

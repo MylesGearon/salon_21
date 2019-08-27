@@ -11,6 +11,8 @@
   width: 100%;
   height: auto;
   min-height: calc(100vh - #{$mobile-nav-height * 1px});
+  
+  background-color: $background-gray;
 }
 
 @include media(">=tablet") {

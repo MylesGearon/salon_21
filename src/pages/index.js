@@ -22,8 +22,7 @@ export default ({ data, path }) => {
         <Img
           className={styles.img}
           fluid={
-            nextConcert.node.frontmatter.landingPageImage.childImageSharp
-              .fluid
+            nextConcert.node.frontmatter.portraitImage.childImageSharp.fluid
           }
           fadeIn={true}
         />
@@ -42,7 +41,14 @@ export const pageQuery = graphql`
           frontmatter {
             title
             datetime
-            landingPageImage {
+            landscapeImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+            portraitImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_tracedSVG
