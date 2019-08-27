@@ -55,16 +55,15 @@ collections:
           - label: Instrument
             name: instrument
             widget: string
-
-
-      # - {
-      #     name: program_items,
-      #     label: "Program Items",
-      #     widget: "list"
-      #     fields:
-      #       - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
-      #   }
-      #     fields:
-      #       - { label: 'title', name: 'Title', widget: 'string', required: true }
-      #       # - { label: composer, name: Composer, widget: string, required: true }
-      #   }
+      - name: program_items
+        label: "Program Items"
+        widget: "list"
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: true
+          - label: Composer
+            name: composer
+            widget: "string"
+            required: true
