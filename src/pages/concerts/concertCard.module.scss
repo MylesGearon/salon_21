@@ -28,7 +28,7 @@ $default-margin: 15;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .date-container {
@@ -96,10 +96,6 @@ $default-margin: 15;
     margin: $default-margin * 1px;
     margin-top: 0;
 
-    transition: box-shadow .5s;
-    &:hover {
-      box-shadow: 0 0 5px gray;
-    }
   }
 
   .button {
@@ -128,7 +124,7 @@ $default-margin: 15;
 
 @include media(">=desktop") {
   .container {
-    max-width: 750px;
+    max-width: 850px;
   }
 
   .bottom-container {
@@ -136,6 +132,10 @@ $default-margin: 15;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+
+    .link-wrapper {
+      margin-bottom: 0;
+    }
   }
 
   .details {

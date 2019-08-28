@@ -17,4 +17,9 @@ $input-button-height: 40;
   outline-style: none;
   box-shadow: none;
   border-color: transparent;
+
+  transition: box-shadow .5s;
+  &:hover {
+    box-shadow: 0 0 5px gray;
+  }
 }
