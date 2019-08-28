@@ -21,9 +21,13 @@ export default ({ data, path }) => {
       <AppContainer currentPath={path} key="AppContainer">
         <Img
           className={styles.img}
-          fluid={
-            nextConcert.node.frontmatter.portraitImage.childImageSharp.fluid
-          }
+          fluid={[
+            nextConcert.node.frontmatter.portraitImage.childImageSharp.fluid,
+            {
+              ...nextConcert.node.frontmatter.landscapeImage.childImageSharp.fluid,
+              media: '(min-width: 900px)'
+            }
+          ]}
           fadeIn={true}
         />
       </AppContainer>
@@ -47,14 +51,14 @@ export const pageQuery = graphql`
             }
             landscapeImage {
               childImageSharp {
-                fluid {
+                fluid(quality: 100) {
                   ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }
             portraitImage {
               childImageSharp {
-                fluid {
+                fluid(quality: 100) {
                   ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
