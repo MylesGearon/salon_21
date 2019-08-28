@@ -1,6 +1,7 @@
 ---
 title: Dreamscapes
 datetime: 2019-12-20T00:00:32.041Z
+url: dreamscapes
 location: Weston Art Gallery
 landscapeImage: /assets/website-picture_dreamscapes.jpg
 portraitImage: /assets/instagram_dreamscapes.jpg
