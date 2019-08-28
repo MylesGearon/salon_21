@@ -63,7 +63,7 @@ const ConcertCard = ({concert}) => {
               Details
             </button>
           </Link>
-          <a href={ticketLink} className={styles.linkWrapper}>
+          <a href={ticketLink} target="_blank" className={styles.linkWrapper}>
             <button  className={[styles.button, styles.buyButton].join(' ')}>
               Buy Now
             </button>
