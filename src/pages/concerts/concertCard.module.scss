@@ -89,27 +89,32 @@ $default-margin: 15;
 .button-container {
   display: flex;
   justify-content: space-around;
-}
 
-.button {
-  @include button-defaults;
+  .link-wrapper {
+    width: calc(100% - #{$default-margin * 2px});
+    min-width: 140px;
+    margin: $default-margin * 1px;
+    margin-top: 0;
 
-  width: calc(100% - #{$default-margin * 2px});
-  margin: $default-margin * 1px;
-  margin-top: 0;
-
-  transition: box-shadow .5s;
-  &:hover {
-    box-shadow: 0 0 5px gray;
+    transition: box-shadow .5s;
+    &:hover {
+      box-shadow: 0 0 5px gray;
+    }
   }
-}
 
-.details-button {
-  background: $neutral-gray;
-}
+  .button {
+    @include button-defaults;
 
-.buy-button {
-  background: $accent-yellow;
+    width: 100%;
+  }
+
+  .details-button {
+    background: $neutral-gray;
+  }
+
+  .buy-button {
+    background: $accent-yellow;
+  }
 }
 
 .artists {

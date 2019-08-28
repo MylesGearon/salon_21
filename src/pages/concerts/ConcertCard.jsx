@@ -3,6 +3,7 @@ import p from 'prop-types';
 import fitty from 'fitty';
 import Img from 'gatsby-image';
 import moment from 'moment';
+import { Link } from 'gatsby';
 
 import styles from './concertCard.module.scss';
 
@@ -14,7 +15,9 @@ const ConcertCard = ({concert}) => {
         title,
         artists,
         datetime,
-        location
+        location,
+        url,
+        ticketLink
       }
     }
   } = concert;
@@ -55,8 +58,16 @@ const ConcertCard = ({concert}) => {
           </div>
         </div>
         <div className={styles.buttonContainer}>
-          <button className={[styles.button, styles.detailsButton].join(' ')} >Details</button>
-          <button className={[styles.button, styles.buyButton].join(' ')} >Buy Now</button>
+          <Link to={`/concerts/${url}`} className={styles.linkWrapper}>
+            <button className={[styles.button, styles.detailsButton].join(' ')}>
+              Details
+            </button>
+          </Link>
+          <a href={ticketLink} className={styles.linkWrapper}>
+            <button  className={[styles.button, styles.buyButton].join(' ')}>
+              Buy Now
+            </button>
+          </a>
         </div>
       </div>
     </div>

@@ -98,6 +98,8 @@ export const pageQuery = graphql`
                 }
               }
             }
+            url
+            ticketLink
           }
         }
       }

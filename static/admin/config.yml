@@ -13,7 +13,7 @@ collections:
     create: true
     fields:
       - { name: title, label: Title, widget: string, required: true }
-      - { name: google_maps_location, label: Google Maps Iframe Src, widget: string }
+      - { name: googleMapsLocation, label: Google Maps Iframe Src, widget: string }
       - { name: address1, label: Address Line 1, widget: string }
       - { name: address2, label: Address Line 2, widget: string }
   - name: concerts
@@ -23,6 +23,8 @@ collections:
     fields:
       - { name: title, label: Title, widget: string, required: true }
       - { name: datetime, label: Time, widget: datetime, required: true }
+      - { name: url, label: URL Extension, widget: string, required: true }
+      - { name: ticketLink, label: Ticket Link, widget: string }
       - {
           name: location,
           label: Location,
@@ -55,7 +57,7 @@ collections:
           - label: Instrument
             name: instrument
             widget: string
-      - name: program_items
+      - name: programItems
         label: "Program Items"
         widget: "list"
         fields:

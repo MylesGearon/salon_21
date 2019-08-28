@@ -13,12 +13,8 @@ exports.createPages = ({ actions, graphql }) => {
       ) {
         edges {
           node {
-            id
-            fields {
-              slug
-            }
             frontmatter {
-              title
+              url
             }
           }
         }
@@ -35,7 +31,7 @@ exports.createPages = ({ actions, graphql }) => {
     concerts.forEach(edge => {
       const id = edge.node.id
       createPage({
-        path: `concerts/${_.snakeCase(edge.node.frontmatter.title)}`,
+        path: `concerts/${edge.node.frontmatter.url}`,
         component: path.resolve('src/pages/concert/index.jsx'),
         context: { title: edge.node.frontmatter.title },
       })
