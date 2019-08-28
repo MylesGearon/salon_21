@@ -6,6 +6,7 @@ import moment from 'moment';
 import { Link } from 'gatsby';
 
 import styles from './concertCard.module.scss';
+import DateContainer from '../../components/DateContainer';
 
 const ConcertCard = ({concert}) => {
   const {
@@ -45,11 +46,7 @@ const ConcertCard = ({concert}) => {
       </div>
       <div className={styles.bottomContainer}>
         <div className={styles.concertInfo}>
-          <div className={styles.dateContainer}>
-            <h3 className={styles.dateNumber}>{concert.parsedDate.format('D')}</h3>
-            <br className={styles.dateBreak} />
-            <h4 className={styles.dateMonth}>{concert.parsedDate.format('MMM')}</h4>
-          </div>
+          <DateContainer date={concert.parsedDate} className={styles.dateContainer} />
           <div className={styles.details}>
             <p>
               {concert.parsedDate.format('h:sA')} at {location}

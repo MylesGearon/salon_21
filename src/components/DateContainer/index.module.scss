@@ -1,0 +1,18 @@
+.date-container {
+  text-align: center;
+  font-family: "Mission Gothic";
+
+  padding: 10px;
+  min-width: 60px;
+
+  border: 1px solid black;
+  border-radius: 2px;
+
+  &>* {
+    margin: 0;
+  }
+
+  .date-month {
+    margin-top: -15px;
+  }
+}

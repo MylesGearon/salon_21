@@ -62,7 +62,7 @@ const ConcertIndex = ({ data, path }) => {
         <div className={styles.body}>
           {
             groupedConcerts.map(([month, concerts]) => (
-              <Fragment>
+              <Fragment key={month}>
                 <h3 className={styles.monthDivider} id={month}>
                   {moment(month, 'YYYY MM').add(1, 'month').format('MMMM YYYY')}
                 </h3>
