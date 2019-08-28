@@ -13,6 +13,7 @@ exports.createPages = ({ actions, graphql }) => {
       ) {
         edges {
           node {
+            id
             frontmatter {
               path
             }
@@ -29,11 +30,11 @@ exports.createPages = ({ actions, graphql }) => {
     const concerts = result.data.allMarkdownRemark.edges;
 
     concerts.forEach(edge => {
-      const id = edge.node.id
+      const id = edge.node.id;
       createPage({
         path: `concerts/${edge.node.frontmatter.path}`,
         component: path.resolve('src/pages/concert/index.jsx'),
-        context: { title: edge.node.frontmatter.title },
+        context: { id },
       })
     });
   })
