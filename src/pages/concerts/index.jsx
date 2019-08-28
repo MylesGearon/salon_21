@@ -98,7 +98,7 @@ export const pageQuery = graphql`
                 }
               }
             }
-            url
+            path
             ticketLink
           }
         }

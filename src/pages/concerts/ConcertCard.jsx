@@ -16,7 +16,7 @@ const ConcertCard = ({concert}) => {
         artists,
         datetime,
         location,
-        url,
+        path,
         ticketLink
       }
     }
@@ -58,7 +58,7 @@ const ConcertCard = ({concert}) => {
           </div>
         </div>
         <div className={styles.buttonContainer}>
-          <Link to={`/concerts/${url}`} className={styles.linkWrapper}>
+          <Link to={`/concerts/${path}`} className={styles.linkWrapper}>
             <button className={[styles.button, styles.detailsButton].join(' ')}>
               Details
             </button>

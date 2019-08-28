@@ -23,7 +23,7 @@ collections:
     fields:
       - { name: title, label: Title, widget: string, required: true }
       - { name: datetime, label: Time, widget: datetime, required: true }
-      - { name: url, label: URL Extension, widget: string, required: true }
+      - { name: path, label: URL Extension, widget: string, required: true }
       - { name: ticketLink, label: Ticket Link, widget: string }
       - {
           name: location,

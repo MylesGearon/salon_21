@@ -14,7 +14,7 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             frontmatter {
-              url
+              path
             }
           }
         }
@@ -31,7 +31,7 @@ exports.createPages = ({ actions, graphql }) => {
     concerts.forEach(edge => {
       const id = edge.node.id
       createPage({
-        path: `concerts/${edge.node.frontmatter.url}`,
+        path: `concerts/${edge.node.frontmatter.path}`,
         component: path.resolve('src/pages/concert/index.jsx'),
         context: { title: edge.node.frontmatter.title },
       })
