@@ -27,7 +27,7 @@
 }
 
 .title {
-  font-size: 2.4rem;
+  font-size: 2.4em;
   margin: 0;
   color: white;
 }
@@ -57,7 +57,7 @@
     align-items: center;
 
     background-color: $accent-yellow;
-    min-width: 40px;
+    min-width: 110px;
     padding: 0 12px;
     text-align: center;
 
@@ -75,5 +75,29 @@
 
   .info {
     margin: 12px 18px;
+  }
+}
+
+@include media(">=desktop") {
+  .title-container {
+    min-width: 600px;
+    bottom: 150px;
+  }
+
+  .title {
+    font-size: 3.2em;
+  }
+
+  .subtitle {
+    font-size: 1.4em;
+    padding: 0 0 10px 0;
+  }
+
+  .details-indicator {
+    font-size: 1.4em;
+  }
+
+  .buy-link {
+    min-width: 140px;
   }
 }
