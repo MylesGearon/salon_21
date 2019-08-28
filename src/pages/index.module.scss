@@ -1,5 +1,79 @@
+@import '../../node_modules/include-media/dist/_include-media.scss';
+@import '../styles/variables';
+
 .img {
   flex-grow: 2;
   height: 100%;
   min-width: 100%;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+  max-width: 90%;
+
+  background-color: black;
+  color: white;
+}
+
+.info {
+  margin: 12px;
+  * {
+    color: white;
+  }
+}
+
+.title {
+  font-size: 2.4rem;
+  margin: 0;
+  color: white;
+}
+
+.location {
+  width: 100%;
+}
+
+.artists {
+  display: none;
+}
+
+.details-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.buy-link {
+  display: none;
+}
+
+@include media(">=400px") {
+  .buy-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $accent-yellow;
+    min-width: 40px;
+    padding: 0 12px;
+    text-align: center;
+
+    .buy-text {
+      margin: 0;
+      color: white;
+    }
+  }
+}
+
+@include media(">=tablet") {
+  .title-container {
+    min-width: 425px;
+  }
+
+  .info {
+    margin: 12px 18px;
+  }
 }
