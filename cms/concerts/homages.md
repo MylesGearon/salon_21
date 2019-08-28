@@ -11,4 +11,7 @@ artists:
     name: Lauren McAllister
   - instrument: piano
     name: Stephen Variames
+programItems:
+  - composer: Dimitri Shostakovich
+    title: Example Piece
 ---
