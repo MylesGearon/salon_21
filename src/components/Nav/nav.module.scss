@@ -99,7 +99,7 @@ $top-bottom-margin: $mobile-nav-height + 30;
 }
 
 .external-link {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   text-align: justify;
@@ -112,9 +112,6 @@ $top-bottom-margin: $mobile-nav-height + 30;
 
 .external-link-text {
   font-size: 14px;
-}
-
-.email-link {
 }
 
 $border-width: $border-height;

@@ -57,22 +57,18 @@ const Nav = props => {
         }
         <div>
           <div className={styles.contactsContainer}>
-            <div className={styles.externalLink + ' ' + styles.emailLink}>
+            <a className={styles.externalLink + ' ' + styles.emailLink} target="_blank" href="mailto:bonjour@salon21.org">
               <FiMail className={styles.externalLinkIcon}/>
-              <a target="_blank" href="mailto:bonjour@salon21.org">
-                <span className={styles.externalLinkText}>
-                  bonjour@salon21.org
-                </span>
-              </a>
-            </div>
-            <div className={styles.externalLink}>
+              <span className={styles.externalLinkText}>
+                bonjour@salon21.org
+              </span>
+            </a>
+            <a className={styles.externalLink} target="_blank" href="https://facebook.com/salon21cincinnati">
               <FaFacebookSquare className={styles.externalLinkIcon}/>
-              <a target="_blank" href="https://facebook.com/salon21cincinnati">
-                <span className={styles.externalLinkText}>
-                  Salon21Cincinnati
-                </span>
-              </a>
-            </div>
+              <span className={styles.externalLinkText}>
+                Salon21Cincinnati
+              </span>
+            </a>
           </div>
           <EmailSignup />
         </div>
