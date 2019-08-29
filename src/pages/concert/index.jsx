@@ -69,9 +69,9 @@ export default ({ data, path }) => {
             <div className={styles.programContainer}>
               <h3>Program</h3>
               {
-                programItems.length > 0 ?
-                  programItems.map(programItem => <h5>{programItem.title}, {programItem.composer}</h5>) :
-                  <h5>TBA</h5>
+                programItems.length == 0 || programItems[0].title.toLowerCase() == 'tba' ?
+                  <h5>TBA</h5> :
+                  programItems.map(programItem => <h5>{programItem.title}, {programItem.composer}</h5>)
               }
             </div>
           </div>

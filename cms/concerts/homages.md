@@ -15,6 +15,7 @@ artists:
     name: Stephen Variames
 programItems:
   - title: TBA
+  - composer: asdf
 programNotes: >-
   Reality or Fantasy? Salon 21 invites audiences to experience a musical
   meditation on the nature of dreams, both abandoned and actualized with
@@ -27,4 +28,3 @@ programNotes: >-
   sculptor Camille Claudel and her tumultuous relationship with her lover and
   fellow sculptor, Auguste Rodin.
 ---
-
