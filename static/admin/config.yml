@@ -7,22 +7,6 @@ media_folder: cms/assets
 public_folder: assets
 
 collections:
-  - name: locations
-    label: Locations
-    folder: cms/locations
-    create: true
-    fields:
-      - { name: title, label: Title, widget: string, required: true }
-      - { name: googleMapsLocation, label: Google Maps Iframe Src, widget: string }
-      - { name: address1, label: Address Line 1, widget: string }
-      - { name: address2, label: Address Line 2, widget: string }
-  - name: sponsors
-    label: Sponsors
-    folder: cms/sponsors
-    create: true
-    fields:
-      - { name: title, label: Title, widget: string, required: true }
-      - { name: logo, label: Logo, widget: image, required: true }
   - name: concerts
     label: Concerts
     folder: cms/concerts
@@ -32,28 +16,9 @@ collections:
       - { name: datetime, label: Time, widget: datetime, required: true }
       - { name: path, label: URL Extension, widget: string, required: true }
       - { name: ticketLink, label: Ticket Link, widget: string }
-      - {
-          name: location,
-          label: Location,
-          widget: relation,
-          collection: locations,
-          multiple: false,
-          searchFields: ['title'],
-          displayFields: ['title'],
-          valueField: 'title',
-          required: true
-        }
-      - {
-          name: sponsors,
-          label: Sponsors,
-          widget: relation,
-          collection: sponsors,
-          multiple: true,
-          searchFields: ['title'],
-          displayfields: ['title'],
-          valueField: 'title',
-          required: false
-        }
+      - { name: locationTitle, label: Location Title, widget: string, required: true }
+      - { name: address1, label: Address Line 1, widget: string }
+      - { name: address2, label: Address Line 2, widget: string }
       - {
           name: landscapeImage,
           label: Landscape Image,
@@ -87,6 +52,12 @@ collections:
             name: composer
             widget: "string"
             required: true
+      - name: sponsors
+        label: Sponsors
+        widget: "list"
+        fields:
+          - { name: title, label: Title, widget: string, required: true }
+          - { name: logo, label: Logo, widget: image, required: true }
       - name: programNotes
         label: "Program Notes"
         widget: "markdown"

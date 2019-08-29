@@ -23,7 +23,7 @@ export default ({ data, path }) => {
         landscapeImage,
         artists,
         datetime,
-        location,
+        locationTitle,
         ticketLink
       }
     }
@@ -57,7 +57,7 @@ export default ({ data, path }) => {
               <div className={styles.subtitle}>
                 <i className={styles.artists}>{artists.map(artist => artist.name).join(' & ')}</i>
                 <br />
-                <i className={styles.location}>{moment(datetime).format('MM/DD/YY')} at {location}</i>
+                <i className={styles.location}>{moment(datetime).format('MM/DD/YY')} at {locationTitle}</i>
                 <br />
               </div>
               <i className={styles.detailsIndicator}>details<FiChevronsRight /></i>
@@ -87,7 +87,7 @@ export const pageQuery = graphql`
               instrument
             }
             ticketLink
-            location
+            locationTitle
             path
             landscapeImage {
               childImageSharp {

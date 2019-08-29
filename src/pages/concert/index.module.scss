@@ -42,9 +42,10 @@ $fixed-footer-height: $input-button-height + 30;
 .body {
   display: grid;
   grid-template-columns: [left] 90px [right] auto;
-  grid-template-rows: [top] auto [bottom] auto;
+  grid-template-rows: [top] auto [middle] auto [bottom] auto;
   grid-template-areas:
     "top-left top-right"
+    "middle middle"
     "bottom bottom";
 
   width: 80%;
@@ -52,7 +53,7 @@ $fixed-footer-height: $input-button-height + 30;
   max-width: 500px;
 
   margin-top: 15px;
-  margin-bottom: $fixed-footer-height * 1px;
+  margin-bottom: $fixed-footer-height * 1px + 15px;
 }
 
 .time-and-location {
@@ -74,7 +75,7 @@ $fixed-footer-height: $input-button-height + 30;
 }
 
 .program-notes {
-  grid-area: bottom;
+  grid-area: middle;
 }
 
 .program-notes-title {
@@ -83,6 +84,27 @@ $fixed-footer-height: $input-button-height + 30;
 
 .program-notes-text {
   text-align: justify;
+}
+
+.sponsors-container {
+  grid-area: bottom;
+}
+
+.sponsors-title {
+  text-align: center;
+}
+
+.sponsors-logos-container {
+  display: flex;
+  justify-content: space-around;
+
+  & > * {
+    flex-grow: 1;
+  }
+}
+
+.sponsor-logo {
+  max-width: 100px;
 }
 
 .buy-button-footer{

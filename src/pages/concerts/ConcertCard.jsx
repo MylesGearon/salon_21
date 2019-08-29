@@ -16,7 +16,7 @@ const ConcertCard = ({concert}) => {
         title,
         artists,
         datetime,
-        location,
+        locationTitle,
         path,
         ticketLink
       }
@@ -49,7 +49,7 @@ const ConcertCard = ({concert}) => {
           <DateContainer date={concert.parsedDate} className={styles.dateContainer} />
           <div className={styles.details}>
             <p>
-              {concert.parsedDate.format('h:sA')} at {location}
+              {concert.parsedDate.format('h:ssA')} at {locationTitle}
             </p>
             {artists.map(({name, instrument}) => <p>{name}, <i>{instrument}</i></p>)}
           </div>

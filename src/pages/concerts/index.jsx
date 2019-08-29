@@ -86,7 +86,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             datetime
-            location
+            locationTitle
             artists {
               name
               instrument

@@ -17,11 +17,12 @@ export default ({ data, path }) => {
         title,
         datetime,
         ticketLink,
-        location,
+        locationTitle,
         landscapeImage,
         portraitImage,
         artists,
         programItems,
+        sponsors,
         programNotes
       }
     }
@@ -31,8 +32,6 @@ export default ({ data, path }) => {
 
   const markdownParser = new showdown.Converter();
   const programNotesHtml = markdownParser.makeHtml(programNotes);
-  console.log(programNotes)
-  console.log(programNotesHtml)
 
   return (
     <Fragment>
@@ -60,7 +59,7 @@ export default ({ data, path }) => {
           <div className={styles.body}>
             <div className={styles.locationInfo}>
               <DateContainer date={parsedDate} />
-              <p className={styles.timeAndLocation}>{parsedDate.format('h:sA')} at {location}</p>
+              <p className={styles.timeAndLocation}>{parsedDate.format('h:ssA')} at {locationTitle}</p>
             </div>
             <div className={styles.concertInfo}>
               <div className={styles.artistsContainer}>
@@ -70,17 +69,23 @@ export default ({ data, path }) => {
               <div className={styles.programContainer}>
                 <h3>Program</h3>
                 {
-                  programItems.length == 0 || programItems[0].title.toLowerCase() == 'tba' ?
-                  <h5>TBA</h5> :
-                    programItems.map(programItem => <h5>{programItem.title}, {programItem.composer}</h5>)
-                  }
-                </div>
-              </div>
-              <div className={styles.programNotes}>
-                <h2 className={styles.programNotesTitle}>Program Notes</h2>
-                <div className={styles.programNotesText} dangerouslySetInnerHTML={{__html: programNotesHtml}} />
+                programItems.length == 0 || programItems[0].title.toLowerCase() == 'tba' ?
+                <h5>TBA</h5> :
+                  programItems.map(programItem => <h5>{programItem.title}, {programItem.composer}</h5>)
+                }
               </div>
             </div>
+            <div className={styles.programNotes}>
+              <h2 className={styles.programNotesTitle}>Program Notes</h2>
+              <div className={styles.programNotesText} dangerouslySetInnerHTML={{__html: programNotesHtml}} />
+            </div>
+            <div className={styles.sponsorsContainer}>
+              <h2 className={styles.sponsorsTitle}>Sponsored By:</h2>
+              <div className={styles.sponsorsLogosContainer}>
+                {sponsors.map(sponsor => <Img className={styles.sponsorLogo} fluid={sponsor.logo.childImageSharp.fluid} />)}
+              </div>
+            </div>
+          </div>
           </div>
           <div className={styles.buyButtonFooter}>
             <Link to="/concerts" className={styles.concertsLink}>
@@ -108,7 +113,7 @@ export const query = graphql`
         datetime
         path
         ticketLink
-        location
+        locationTitle
         landscapeImage {
           childImageSharp {
             fluid {
@@ -130,6 +135,16 @@ export const query = graphql`
         programItems {
           title
           composer
+        }
+        sponsors {
+          title
+          logo {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
         }
         programNotes
       }
