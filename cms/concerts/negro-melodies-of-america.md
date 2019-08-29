@@ -1,6 +1,6 @@
 ---
 title: 'Negro Melodies of America '
-datetime: 2020-02-27T23:27:33.557Z
+datetime: 2020-02-28T00:38:33.557Z
 path: negro-melodies-of-america
 ticketLink: 'http://www.eventbrite.com/e/negro-melodies-of-america-tickets-70347245505'
 locationTitle: Weston Art Gallery
