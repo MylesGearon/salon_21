@@ -92,6 +92,25 @@ $top-bottom-margin: $mobile-nav-height + 30;
   }
 }
 
+.external-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+.external-link-icon {
+  font-size: 1.3rem;
+}
+
+.external-link-text {
+  font-size: 14px;
+}
+
+.email-link {
+  margin-bottom: 15px;
+}
+
 $border-width: $border-height;
 @include media(">=tablet") {
   .background {
@@ -116,6 +135,10 @@ $border-width: $border-height;
     height: calc(100vh - #{$border-width * 2px});
     width: calc(100% - #{$border-width * 3px});
     justify-content: space-between;
+  }
+
+  .external-link {
+    flex-direction: column;
   }
 
   .border {

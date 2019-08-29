@@ -1,15 +1,14 @@
 @import '../../../node_modules/include-media/dist/_include-media.scss';
 @import '../../styles/variables';
 
-$container-height: $input-button-height * 2.5;
-
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
 
-  height: $container-height * 1px;
+  width: 175px;
+  margin: 0;
 }
 
 .input {
@@ -24,16 +23,20 @@ $container-height: $input-button-height * 2.5;
   color: $neutral-gray;
 }
 
+.thank-you {
+  margin: 0;
+}
+
 .submit {
   @include button-defaults;
-  width: 100%;
+  font-size: 20px;
+  margin: 0;
   background: $accent-yellow;
-  color: $dark-gray;
+  color: black;
 }
 
 @include media(">=tablet") {
   .container {
-    height: $container-height + 20px;
     width: 90%;
     padding: 10px 0 ;
   }

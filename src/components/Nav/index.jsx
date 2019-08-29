@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX, FiMail } from 'react-icons/fi';
+import { FaFacebookSquare } from 'react-icons/fa';
 
 import styles from './nav.module.scss';
 import smallLogo from '../../assets/Salon21_Logo.png';
@@ -55,6 +56,24 @@ const Nav = props => {
           links.map((linkProps, index) => <NavLink key={index} currentPath={props.currentPath} {...linkProps} />)
         }
         <EmailSignup />
+        <div>
+          <div className={styles.externalLink + ' ' + styles.emailLink}>
+            <FiMail className={styles.externalLinkIcon}/>
+            <a target="_blank" href="mailto:bonjour@salon21.org">
+              <span className={styles.externalLinkText}>
+                bonjour@salon21.org
+              </span>
+            </a>
+          </div>
+          <div className={styles.externalLink}>
+            <FaFacebookSquare className={styles.externalLinkIcon}/>
+            <a target="_blank" href="https://facebook.com/salon21cincinnati">
+              <span className={styles.externalLinkText}>
+                fb.com/Salon21Cincinnati
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
       <div className={styles.border} key="border" />
     </div>,
