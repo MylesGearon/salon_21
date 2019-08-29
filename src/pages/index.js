@@ -5,7 +5,6 @@ import Img from "gatsby-image"
 import moment from "moment"
 import { Helmet } from "react-helmet"
 import { FiChevronsRight } from 'react-icons/fi';
-import fitty from 'fitty';
 
 import AppContainer from "../components/AppContainer"
 import styles from "./index.module.scss"
@@ -28,10 +27,6 @@ export default ({ data, path }) => {
       }
     }
   } = nextConcert;
-
-  useEffect(() => {
-    fitty(`.${styles.location}`);
-  });
 
   return (
     <Fragment>
