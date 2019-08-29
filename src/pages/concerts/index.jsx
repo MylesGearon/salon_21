@@ -1,11 +1,13 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import _ from 'lodash';
 import moment from 'moment';
+import fitty from 'fitty';
 
 import AppContainer from '../../components/AppContainer';
 import styles from './index.module.scss';
+import concertCardStyles from './index.module.scss';
 import ConcertCard from './ConcertCard';
 
 const sortConcertsByDate = edges => {
@@ -38,6 +40,15 @@ const groupConcertsByMonth = concerts => {
 };
 
 const ConcertIndex = ({ data, path }) => {
+
+  useEffect(() => {
+      fitty(`.${concertCardStyles.title}`, {
+        maxSize: 24,
+        minSize: 10,
+        multiLine: false
+      });
+  }, [false]);
+
   const groupedConcerts = groupConcertsByMonth(sortConcertsByDate(data.allMarkdownRemark.edges));
   return (
     <Fragment>

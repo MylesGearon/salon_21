@@ -1,6 +1,5 @@
 import React, { useEffect, Fragment } from 'react';
 import p from 'prop-types';
-import fitty from 'fitty';
 import Img from 'gatsby-image';
 import moment from 'moment';
 import { Link } from 'gatsby';
@@ -23,13 +22,6 @@ const ConcertCard = ({concert}) => {
       }
     }
   } = concert;
-
-  useEffect(() => {
-    fitty(`.${styles.title}`, {
-      maxSize: 24,
-      minSize: 20
-    });
-  });
 
   return (
     <div className={styles.container}>

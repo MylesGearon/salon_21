@@ -40,15 +40,18 @@ $default-margin: 15;
     position: absolute;
     right: 0;
     min-width: 40%;
+    max-width: 80%;
 
     transform: translateY(-130%);
 
     text-align: left;
     color: white;
     background-color: black;
+    padding: 15px;
 
     .title {
-      margin: 15px;
+      max-width: 100%;
+      margin: 0;
       text-transform: uppercase;
     }
   }
