@@ -18,6 +18,8 @@ export default ({ data, path }) => {
         datetime,
         ticketLink,
         locationTitle,
+        address1,
+        address2,
         landscapeImage,
         portraitImage,
         artists,
@@ -57,21 +59,27 @@ export default ({ data, path }) => {
         </div>
         <div className={styles.bodyContainer}>
           <div className={styles.body}>
-            <div className={styles.locationInfo}>
-              <DateContainer date={parsedDate} />
-              <p className={styles.timeAndLocation}>{parsedDate.format('h:ssA')} at {locationTitle}</p>
+            <div className={styles.locationCol}>
+              <a href={ticketLink} target="_blank" className={styles.desktopBuyLink}>
+                <button className={styles.buyButton}>
+                  Buy Now
+                </button>
+              </a>
+              <DateContainer className={styles.dateContainer} date={parsedDate} />
+              <p className={styles.timeAndLocation}>{parsedDate.format('MMMM Do YYYY h:ssA')}</p>
+              <p className={styles.address}>{locationTitle}<br />{address1}<br />{address2}</p>
             </div>
             <div className={styles.concertInfo}>
               <div className={styles.artistsContainer}>
-                <h3>Artists</h3>
+                <h3 className={styles.infoSectionHeader}>Artists</h3>
                 {artists.map(artist => <h5>{artist.name}, <i>{artist.instrument}</i></h5>)}
               </div>
               <div className={styles.programContainer}>
-                <h3>Program</h3>
+                <h3 className={styles.infoSectionHeader}>Program</h3>
                 {
-                programItems.length == 0 || programItems[0].title.toLowerCase() == 'tba' ?
-                <h5>TBA</h5> :
-                  programItems.map(programItem => <h5>{programItem.title}, {programItem.composer}</h5>)
+                  programItems.length == 0 || programItems[0].title.toLowerCase() == 'tba' ?
+                    <h5>TBA</h5> :
+                    programItems.map(programItem => <h5>{programItem.title}, {programItem.composer}</h5>)
                 }
               </div>
             </div>
@@ -80,26 +88,26 @@ export default ({ data, path }) => {
               <div className={styles.programNotesText} dangerouslySetInnerHTML={{__html: programNotesHtml}} />
             </div>
             <div className={styles.sponsorsContainer}>
-              <h2 className={styles.sponsorsTitle}>Sponsored By:</h2>
+              <h3 className={styles.sponsorsTitle}>Sponsored By</h3>
               <div className={styles.sponsorsLogosContainer}>
                 {sponsors.map(sponsor => <Img className={styles.sponsorLogo} fluid={sponsor.logo.childImageSharp.fluid} />)}
               </div>
             </div>
           </div>
-          </div>
-          <div className={styles.buyButtonFooter}>
-            <Link to="/concerts" className={styles.concertsLink}>
-              <FiChevronsLeft />
-              <h4 className={styles.concertsLinkText}>View All<br />Concerts</h4>
-            </Link>
-            <a href={ticketLink} target="_blank" className={styles.buyLink}>
-              <button className={styles.buyButton}>
-                Buy Now
-              </button>
-            </a>
-          </div>
-        </AppContainer>
-      </Fragment>
+        </div>
+        <div className={styles.buyButtonFooter}>
+          <Link to="/concerts" className={styles.concertsLink}>
+            <FiChevronsLeft />
+            <h4 className={styles.concertsLinkText}>View All<br />Concerts</h4>
+          </Link>
+          <a href={ticketLink} target="_blank" className={styles.buyLink}>
+            <button className={styles.buyButton}>
+              Buy Now
+            </button>
+          </a>
+        </div>
+      </AppContainer>
+    </Fragment>
   );
 }
 
@@ -114,6 +122,8 @@ export const query = graphql`
         path
         ticketLink
         locationTitle
+        address1
+        address2
         landscapeImage {
           childImageSharp {
             fluid {

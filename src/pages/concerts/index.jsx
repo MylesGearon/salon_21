@@ -44,7 +44,7 @@ const ConcertIndex = ({ data, path }) => {
       <Helmet><title>Concerts</title></Helmet>
       <AppContainer currentPath={path}>
         <div className={styles.header}>
-          <h1 className={styles.pageTitle}>CONCERTS</h1>
+          <h2 className={styles.pageTitle}>CONCERTS</h2>
           <select
             className={styles.jumpTo}
             onChange={e => window.scrollTo(

@@ -41,7 +41,7 @@ $fixed-footer-height: $input-button-height + 30;
 
 .body {
   display: grid;
-  grid-template-columns: [left] 90px [right] auto;
+  grid-template-columns: [left] 110px [right] auto;
   grid-template-rows: [top] auto [middle] auto [bottom] auto;
   grid-template-areas:
     "top-left top-right"
@@ -57,9 +57,12 @@ $fixed-footer-height: $input-button-height + 30;
 }
 
 .time-and-location {
+  margin-bottom: 0;
+}
+
+.time-and-location, .address {
   margin-top: 15px;
-  font-size: 14px;
-  text-align: center;
+  font-size: 0.8rem;
 }
 
 .artists-container, .program-container {
@@ -137,6 +140,10 @@ $fixed-footer-height: $input-button-height + 30;
   height: auto;
 }
 
+.desktop-buy-link {
+  display: none;
+}
+
 .buy-button {
   @include button-defaults;
   background-color: black;
@@ -151,6 +158,73 @@ $fixed-footer-height: $input-button-height + 30;
 }
 
 @include media(">=desktop") {
+  .body {
+    grid-template-columns: [left] auto [right] 33%;
+    grid-template-rows: [top] auto [bottom] auto;
+    grid-template-areas:
+      "top-left    top-right"
+      "bottom-left bottom-right";
+
+    margin-top: 25px;
+    max-width: 900px;
+  }
+
+  .concert-info {
+    grid-area: top-left;
+
+    display: flex;
+  }
+
+  .info-section-header {
+    margin-bottom: 15px;
+  }
+
+  .artists-container {
+    text-align: left;
+    width: 50%;
+  }
+
+  .program-container {
+    text-align: center;
+    margin: 0;
+    width: 50%;
+  }
+
+  .program-notes {
+    grid-area: bottom-left;
+  }
+
+  .program-notes-title, .program-notes-text {
+    text-align: left;
+  }
+
+  .location-col {
+    grid-area: top-right;
+    text-align: right;
+  }
+
+  .date-container {
+    display: none;
+  }
+
+  .sponsors-container {
+    grid-area: bottom-right;
+    justify-self: flex-end;
+  }
+
+  .sponsor-logo {
+    width: auto;
+  }
+
+  .desktop-buy-link {
+    display: inherit;
+  }
+
+  .buy-button {
+    background-color: $accent-yellow;
+    color: white;
+  }
+
   .buy-button-footer {
     display: none;
   }

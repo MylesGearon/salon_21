@@ -1,3 +1,4 @@
+@import '../../node_modules/include-media/dist/_include-media.scss';
 @import url('https://fonts.googleapis.com/css?family=Lora');
 
 a {
@@ -11,4 +12,20 @@ button {
 
 input {
   font-family: 'Mission Gothic', 'Carrios Gothic', 'Arial', 'sans-serif';
+}
+
+html {
+  font-size: 14px;
+}
+
+@include media(">=tablet") {
+  html {
+    font-size: 16px;
+  }
+}
+
+@include media(">=desktop") {
+  html {
+    font-size: 20px;
+  }
 }
