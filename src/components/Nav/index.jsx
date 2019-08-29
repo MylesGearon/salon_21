@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 import styles from './nav.module.scss';
-import smallLogo from '../../assets/logo_black.svg';
+import smallLogo from '../../assets/Salon21_Logo.png';
 import EmailSignup from '../EmailSignup';
 
 const NavLink = ({ text, linkTo, path, currentPath }) => (
@@ -48,7 +48,9 @@ const Nav = props => {
       key="menu"
     >
       <div className={styles.navList}>
-        <img alt="logo" className={styles.sideNavLogo} src={smallLogo} />
+        <Link to="/">
+          <img alt="logo" className={styles.sideNavLogo} src={smallLogo} />
+        </Link>
         {
           links.map((linkProps, index) => <NavLink key={index} currentPath={props.currentPath} {...linkProps} />)
         }
@@ -57,7 +59,9 @@ const Nav = props => {
       <div className={styles.border} key="border" />
     </div>,
     <div key="fixed-elements" className={styles.mobileFixedElements}>
-      <img alt="logo" className={styles.topNavLogo} src={smallLogo} />
+      <Link to="/">
+        <img alt="logo" className={styles.topNavLogo} src={smallLogo} />
+      </Link>
       <div className={styles.hamburger} onClick={() => setExpanded(!expanded)}>
         <MenuIconName />
       </div>
