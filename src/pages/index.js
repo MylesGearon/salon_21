@@ -87,14 +87,14 @@ export const pageQuery = graphql`
             landscapeImage {
               childImageSharp {
                 fluid(quality: 100) {
-                  ...GatsbyImageSharpFluid_tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
             portraitImage {
               childImageSharp {
                 fluid(quality: 100) {
-                  ...GatsbyImageSharpFluid_tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
