@@ -56,43 +56,45 @@ export default ({ data, path }) => {
             </div>
           </div>
         </div>
-        <div className={styles.body}>
-          <div className={styles.locationInfo}>
-            <DateContainer date={parsedDate} />
-            <p className={styles.timeAndLocation}>{parsedDate.format('h:sA')} at {location}</p>
-          </div>
-          <div className={styles.concertInfo}>
-            <div className={styles.artistsContainer}>
-              <h3>Artists</h3>
-              {artists.map(artist => <h5>{artist.name}, <i>{artist.instrument}</i></h5>)}
+        <div className={styles.bodyContainer}>
+          <div className={styles.body}>
+            <div className={styles.locationInfo}>
+              <DateContainer date={parsedDate} />
+              <p className={styles.timeAndLocation}>{parsedDate.format('h:sA')} at {location}</p>
             </div>
-            <div className={styles.programContainer}>
-              <h3>Program</h3>
-              {
-                programItems.length == 0 || programItems[0].title.toLowerCase() == 'tba' ?
+            <div className={styles.concertInfo}>
+              <div className={styles.artistsContainer}>
+                <h3>Artists</h3>
+                {artists.map(artist => <h5>{artist.name}, <i>{artist.instrument}</i></h5>)}
+              </div>
+              <div className={styles.programContainer}>
+                <h3>Program</h3>
+                {
+                  programItems.length == 0 || programItems[0].title.toLowerCase() == 'tba' ?
                   <h5>TBA</h5> :
-                  programItems.map(programItem => <h5>{programItem.title}, {programItem.composer}</h5>)
-              }
+                    programItems.map(programItem => <h5>{programItem.title}, {programItem.composer}</h5>)
+                  }
+                </div>
+              </div>
+              <div className={styles.programNotes}>
+                <h2 className={styles.programNotesTitle}>Program Notes</h2>
+                <div className={styles.programNotesText} dangerouslySetInnerHTML={{__html: programNotesHtml}} />
+              </div>
             </div>
           </div>
-          <div className={styles.programNotes}>
-            <h2 className={styles.programNotesTitle}>Program Notes</h2>
-            <div className={styles.programNotesText} dangerouslySetInnerHTML={{__html: programNotesHtml}} />
+          <div className={styles.buyButtonFooter}>
+            <Link to="/concerts" className={styles.concertsLink}>
+              <FiChevronsLeft />
+              <h4 className={styles.concertsLinkText}>View All<br />Concerts</h4>
+            </Link>
+            <a href={ticketLink} target="_blank" className={styles.buyLink}>
+              <button className={styles.buyButton}>
+                Buy Now
+              </button>
+            </a>
           </div>
-        </div>
-        <div className={styles.buyButtonFooter}>
-          <Link to="/concerts" className={styles.concertsLink}>
-            <FiChevronsLeft />
-            <h4 className={styles.concertsLinkText}>View All<br />Concerts</h4>
-          </Link>
-          <a href={ticketLink} target="_blank" className={styles.buyLink}>
-            <button className={styles.buyButton}>
-              Buy Now
-            </button>
-          </a>
-        </div>
-      </AppContainer>
-    </Fragment>
+        </AppContainer>
+      </Fragment>
   );
 }
 

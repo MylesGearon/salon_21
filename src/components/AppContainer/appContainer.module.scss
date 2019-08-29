@@ -11,7 +11,7 @@
   width: 100%;
   height: auto;
   min-height: calc(100vh - #{$mobile-nav-height * 1px});
-  
+
   background-color: $background-gray;
 }
 
@@ -20,6 +20,6 @@
     top: auto;
     left: $desktop-nav-width * 1px;
     width: calc(100% - #{$desktop-nav-width * 1px});
-    height: 100vh;
+    min-height: 100vh;
   }
 }

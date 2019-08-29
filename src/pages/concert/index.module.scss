@@ -34,21 +34,25 @@ $fixed-footer-height: $input-button-height + 30;
   }
 }
 
+.body-container {
+  display: flex;
+  justify-content: center;
+}
+
 .body {
   display: grid;
-  grid-template-columns: [left] 110px [right] auto;
+  grid-template-columns: [left] 90px [right] auto;
   grid-template-rows: [top] auto [bottom] auto;
   grid-template-areas:
     "top-left top-right"
     "bottom bottom";
 
-  width: 100%;
+  width: 80%;
+  min-width: 300px;
+  max-width: 500px;
 
+  margin-top: 15px;
   margin-bottom: $fixed-footer-height * 1px;
-}
-
-.location-info {
-  margin: 15px;
 }
 
 .time-and-location {
@@ -58,7 +62,6 @@ $fixed-footer-height: $input-button-height + 30;
 }
 
 .artists-container, .program-container {
-  margin: 15px;
   text-align: right;
 
   * {
@@ -66,10 +69,12 @@ $fixed-footer-height: $input-button-height + 30;
   }
 }
 
+.program-container {
+  margin-top: 15px;
+}
+
 .program-notes {
   grid-area: bottom;
-
-  margin: 25px;
 }
 
 .program-notes-title {
@@ -90,20 +95,20 @@ $fixed-footer-height: $input-button-height + 30;
   width: 100%;
 
   padding: 15px;
-  background-color: $dark-gray;
+  background-color: $accent-yellow;
 }
 
 .concerts-link {
   display: flex;
   align-items: center;
 
-  color: white;
+  color: black;
   margin-right: 22px;
 }
 
 .concerts-link-text {
   margin: 0;
-  color: $accent-pink;
+  color: black;
 }
 
 .buy-link {
@@ -112,6 +117,19 @@ $fixed-footer-height: $input-button-height + 30;
 
 .buy-button {
   @include button-defaults;
-  background-color: $accent-yellow;
+  background-color: black;
+  color: white;
   min-width: 150px;
+}
+
+@include media(">=tablet") {
+  .concerts-link {
+    display: none;
+  }
+}
+
+@include media(">=desktop") {
+  .buy-button-footer {
+    display: none;
+  }
 }
