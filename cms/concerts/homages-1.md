@@ -3,7 +3,7 @@ title: Homages
 datetime: 2019-10-03T23:00:00.000Z
 path: homages
 ticketLink: 'https://www.eventbrite.com/e/homages-tickets-70346156247'
-location_title: Westin Art Gallery
+locationTitle: Westin Art Gallery
 address1: 650 Walnut St
 address2: 'Cincinnati, OH 45202'
 landscapeImage: /assets/website-picture_homages.jpg
