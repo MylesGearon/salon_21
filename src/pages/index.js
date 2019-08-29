@@ -11,7 +11,7 @@ import AppContainer from "../components/AppContainer"
 import styles from "./index.module.scss"
 
 export default ({ data, path }) => {
-  const nextConcert = _.maxBy(data.allMarkdownRemark.edges, ({ node }) => (
+  const nextConcert = _.minBy(data.allMarkdownRemark.edges, ({ node }) => (
     moment(node.frontmatter.datetime)
   ));
 
