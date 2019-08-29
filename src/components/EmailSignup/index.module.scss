@@ -9,6 +9,7 @@
 
   width: 175px;
   margin: 0;
+  padding: 0;
 }
 
 .input {
@@ -37,7 +38,6 @@
 
 @include media(">=tablet") {
   .container {
-    width: 90%;
     padding: 10px 0 ;
   }
 }

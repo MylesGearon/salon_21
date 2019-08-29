@@ -55,24 +55,26 @@ const Nav = props => {
         {
           links.map((linkProps, index) => <NavLink key={index} currentPath={props.currentPath} {...linkProps} />)
         }
-        <EmailSignup />
         <div>
-          <div className={styles.externalLink + ' ' + styles.emailLink}>
-            <FiMail className={styles.externalLinkIcon}/>
-            <a target="_blank" href="mailto:bonjour@salon21.org">
-              <span className={styles.externalLinkText}>
-                bonjour@salon21.org
-              </span>
-            </a>
+          <div className={styles.contactsContainer}>
+            <div className={styles.externalLink + ' ' + styles.emailLink}>
+              <FiMail className={styles.externalLinkIcon}/>
+              <a target="_blank" href="mailto:bonjour@salon21.org">
+                <span className={styles.externalLinkText}>
+                  bonjour@salon21.org
+                </span>
+              </a>
+            </div>
+            <div className={styles.externalLink}>
+              <FaFacebookSquare className={styles.externalLinkIcon}/>
+              <a target="_blank" href="https://facebook.com/salon21cincinnati">
+                <span className={styles.externalLinkText}>
+                  Salon21Cincinnati
+                </span>
+              </a>
+            </div>
           </div>
-          <div className={styles.externalLink}>
-            <FaFacebookSquare className={styles.externalLinkIcon}/>
-            <a target="_blank" href="https://facebook.com/salon21cincinnati">
-              <span className={styles.externalLinkText}>
-                fb.com/Salon21Cincinnati
-              </span>
-            </a>
-          </div>
+          <EmailSignup />
         </div>
       </div>
       <div className={styles.border} key="border" />
