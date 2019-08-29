@@ -10,10 +10,8 @@ landscapeImage: /assets/website-picture_homages.jpg
 portraitImage: /assets/10.3.19-homages-vert.jpg
 artists:
   - instrument: piano
-    name: Linda Saldanha
-programItems:
-  - composer: J.S. Bach
-    title: 'Capriccio on the Departure of a Beloved Brother, BWV 992'
+    name: Lara Saldanha
+programItems: []
 sponsors:
   - logo: /assets/wag-logo.png
     title: Weston Art Gallery
