@@ -3,7 +3,7 @@ title: Homages
 datetime: 2019-10-03T23:00:00.000Z
 path: homages
 ticketLink: 'https://www.eventbrite.com/e/homages-tickets-70346156247'
-locationTitle: Westin Art Gallery
+locationTitle: Weston Art Gallery
 address1: 650 Walnut St
 address2: 'Cincinnati, OH 45202'
 landscapeImage: /assets/website-picture_homages.jpg
@@ -12,11 +12,11 @@ artists:
   - instrument: piano
     name: Linda Saldanha
 programItems:
-  - composer: TBA
-    title: TBA
+  - composer: J.S. Bach
+    title: 'Capriccio on the Departure of a Beloved Brother, BWV 992'
 sponsors:
   - logo: /assets/wag-logo.png
-    title: Westin Art Gallery
+    title: Weston Art Gallery
 programNotes: >-
   Salon 21 opens the sixth season with an ode to the creative muses. Homages is
   an exploration of artistic inspiration. What were the forces that made such
