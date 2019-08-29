@@ -9,6 +9,7 @@ import styles from './concertCard.module.scss';
 import DateContainer from '../../components/DateContainer';
 
 const ConcertCard = ({concert}) => {
+  if (!concert) return null;
   const {
     node: {
       frontmatter: {
