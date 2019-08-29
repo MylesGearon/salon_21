@@ -69,3 +69,6 @@ collections:
             name: composer
             widget: "string"
             required: true
+      - name: programNotes
+        label: "Program Notes"
+        widget: "markdown"
