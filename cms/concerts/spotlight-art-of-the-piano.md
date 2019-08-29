@@ -1,6 +1,6 @@
 ---
 title: 'Spotlight: Art of the Piano'
-datetime: 2020-04-23T23:00:48.313Z
+datetime: 2020-04-23T23:00:00.000Z
 path: art-of-the-piano-2020
 ticketLink: 'http://www.eventbrite.com/e/spotlight-art-of-the-piano-tickets-70347724939'
 locationTitle: Weston Art Gallery
@@ -30,4 +30,3 @@ programNotes: >-
   Winner Daria Tudor. This double feature will leave you feeling inspired and
   amazed at the music being created by these rising stars of tomorrow.
 ---
-

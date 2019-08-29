@@ -1,6 +1,6 @@
 ---
 title: Immediate Song
-datetime: 2020-05-21T23:00:20.297Z
+datetime: 2020-05-21T23:00:00.000Z
 path: immediate-song
 ticketLink: 'http://www.eventbrite.com/e/immediate-song-tickets-70347877395'
 locationTitle: The Mercantile Library
@@ -30,4 +30,3 @@ programNotes: >-
   Tombaugh and pianist Jill Jantzen as they present settings of poems from
   Immediate Song by contemporary composers Steven Weimer and Ellen Harrison.
 ---
-
