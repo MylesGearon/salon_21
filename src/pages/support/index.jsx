@@ -22,7 +22,6 @@ export default ({ path }) => (
         <p>Salon 21: Petite Piano Concerts is a 501(3)(c) non-profit organization. We believe that classical music is for everyone, therefore all concerts are free of charge with a $15 suggested donation. Become more involved with Salon 21: Petite Piano Concerts by making your charitable contribution today. Help us continue presenting up-close and personal piano concerts!</p>
 
         <h3>Thank You!</h3>
-        <p>(- Donors’ names will go on this list as they contribute -)</p>
 
         <h4>Services</h4>
         <p>Patrick Cadieux, filmmaker and photographer</p>
