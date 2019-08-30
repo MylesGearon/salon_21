@@ -127,14 +127,14 @@ export const query = graphql`
         landscapeImage {
           childImageSharp {
             fluid {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
         portraitImage {
           childImageSharp {
             fluid {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
@@ -151,7 +151,7 @@ export const query = graphql`
           logo {
             childImageSharp {
               fluid {
-                ...GatsbyImageSharpFluid_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
