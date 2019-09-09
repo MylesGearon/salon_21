@@ -98,20 +98,40 @@ $top-bottom-margin: $mobile-nav-height + 30;
   align-items: center;
 }
 
-.external-link {
-  display: flex !important;
-  flex-direction: column;
+.external-link-container {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  text-align: justify;
-  margin-bottom: 15px;
+
+  margin-top: 15px;
+  font-size: 1.5rem;
 }
 
-.external-link-icon {
-  font-size: 1.3rem;
+.facebook-icon {
+  transition: color .6s;
+
+  &:hover {
+    color: #3b5998;
+  }
 }
 
-.external-link-text {
-  font-size: 14px;
+.insta-icon {
+  transition: color .6s;
+  color: black;
+
+  &:hover {
+    color: #e95950;
+  }
+}
+
+.email-icon {
+  transition: color .6s;
+  color: black;
+
+  &:hover {
+  transition: color .6s;
+    color: white;
+  }
 }
 
 $border-width: $border-height;
@@ -140,10 +160,6 @@ $border-width: $border-height;
     justify-content: space-between;
   }
 
-  .external-link {
-    flex-direction: column;
-  }
-
   .border {
     position: absolute;
     top: 0;
@@ -152,5 +168,9 @@ $border-width: $border-height;
     background-image: url('../../assets/border_pattern_vertical.png');
     height: 100%;
     width: $border-width * 1px;
+  }
+
+  .footer {
+    width: 80%;
   }
 }

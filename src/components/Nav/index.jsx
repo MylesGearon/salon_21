@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { FiMenu, FiX, FiMail } from 'react-icons/fi';
-import { FaFacebookSquare } from 'react-icons/fa';
+import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 
 import styles from './nav.module.scss';
 import smallLogo from '../../assets/Salon21_Logo.png';
@@ -55,22 +55,19 @@ const Nav = props => {
         {
           links.map((linkProps, index) => <NavLink key={index} currentPath={props.currentPath} {...linkProps} />)
         }
-        <div>
-          <div className={styles.contactsContainer}>
-            <a className={styles.externalLink + ' ' + styles.emailLink} target="_blank" href="mailto:bonjour@salon21.org">
-              <FiMail className={styles.externalLinkIcon}/>
-              <span className={styles.externalLinkText}>
-                bonjour@salon21.org
-              </span>
-            </a>
-            <a className={styles.externalLink} target="_blank" href="https://facebook.com/salon21cincinnati">
-              <FaFacebookSquare className={styles.externalLinkIcon}/>
-              <span className={styles.externalLinkText}>
-                Salon21Cincinnati
-              </span>
-            </a>
-          </div>
+        <div className={styles.footer}>
           <EmailSignup />
+          <div className={styles.contactsContainer}>
+            <div className={styles.externalLinkContainer}>
+              <a target="_blank" href="https://facebook.com/salon21cincinnati">
+                <FaFacebookSquare className={styles.externalLinkIcon + ' ' + styles.facebookIcon}/>
+              </a>
+              <a target="_blank" href="https://www.instagram.com/salon21cincy/"><FaInstagram className={styles.externalLinkIcon + ' ' + styles.instaIcon}/></a>
+              <a className={styles.externalLinkIcon + ' ' + styles.emailIcon} target="_blank" href="mailto:bonjour@salon21.org">
+                <FiMail className={styles.externalLinkIcon}/>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div className={styles.border} key="border" />
