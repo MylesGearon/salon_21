@@ -7,6 +7,13 @@
   min-width: 100%;
 }
 
+.date-container {
+  position: absolute;
+  bottom: calc(100px - 4em);
+  left: 1em;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .title-container {
   display: flex;
   justify-content: space-between;
@@ -14,6 +21,7 @@
   right: 0;
   bottom: 100px;
   max-width: 90%;
+  min-width: 80%;
 
   background-color: black;
   color: white;
@@ -32,39 +40,25 @@
   color: white;
 }
 
-.location {
-  width: 100%;
-}
-
-.artists {
-  display: none;
-}
-
-.details-indicator {
-  display: flex;
-  align-items: center;
-}
-
 .buy-link {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: $accent-yellow;
+  margin: 0;
+  padding: 0 12px;
+
+  color: white;
+  font-size: 1.2em;
 }
 
 @include media(">=400px") {
   .buy-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    background-color: $accent-yellow;
     min-width: 110px;
     padding: 0 12px;
-    text-align: center;
-
-    .buy-text {
-      margin: 0;
-      color: white;
-    }
   }
 }
 

@@ -48,18 +48,9 @@ export default ({ data, path }) => {
           <Link to={`concerts/${nextConcert.frontmatter.path}`}>
             <div className={styles.info}>
               <h1 className={styles.title}>{title}</h1>
-              <div className={styles.subtitle}>
-                <i className={styles.artists}>{artists.map(artist => artist.name).join(' & ')}</i>
-                <br />
-                <i className={styles.location}>{moment(datetime).format('MM/DD/YY')} at {locationTitle}</i>
-                <br />
-              </div>
-              <i className={styles.detailsIndicator}>details<FiChevronsRight /></i>
             </div>
           </Link>
-          <a target="_blank" href={ticketLink} className={styles.buyLink}>
-            <h2 className={styles.buyText}>Buy<br />Tickets</h2>
-          </a>
+          <h2 className={styles.buyLink}>Details</h2>
         </div>
       </AppContainer>
     </Fragment>
