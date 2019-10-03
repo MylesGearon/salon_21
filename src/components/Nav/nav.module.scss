@@ -1,7 +1,7 @@
 @import '../../../node_modules/include-media/dist/_include-media.scss';
 @import '../../styles/variables';
 
-$mobile-fixed-elements-height: 35;
+$mobile-fixed-elements-height: 55;
 $fixed-element-margin: ($mobile-nav-height - $mobile-fixed-elements-height) / 3;
 $border-height: $fixed-element-margin;
 
@@ -56,6 +56,7 @@ $nav-background-z-index: 3;
 .top-nav-logo {
   max-height: $mobile-fixed-elements-height * 1px;
   margin: 0;
+  transform: translateY(3px);
 }
 
 .side-nav-logo {
