@@ -10,23 +10,22 @@ import AppContainer from "../components/AppContainer"
 import styles from "./index.module.scss"
 
 export default ({ data, path }) => {
-  const nextConcert = _.minBy(data.allMarkdownRemark.edges, ({ node }) => (
-    moment(node.frontmatter.datetime)
-  ));
+  const concerts = data.allMarkdownRemark.edges.map(edge => edge.node);
+  const futureConcerts = concerts.filter((node) => moment(node.frontmatter.datetime).isAfter()); //defaults to isAfter current time
+  const nextConcert = _.minBy(futureConcerts, (node) => (moment(node.frontmatter.datetime)));
 
   const {
-    node: {
-      frontmatter: {
-        title,
-        portraitImage,
-        landscapeImage,
-        artists,
-        datetime,
-        locationTitle,
-        ticketLink
-      }
+    frontmatter: {
+      title,
+      portraitImage,
+      landscapeImage,
+      artists,
+      datetime,
+      locationTitle,
+      ticketLink
     }
   } = nextConcert;
+  console.log(title);
 
   return (
     <Fragment>
@@ -46,7 +45,7 @@ export default ({ data, path }) => {
           fadeIn={true}
         />
         <div className={styles.titleContainer}>
-          <Link to={`concerts/${nextConcert.node.frontmatter.path}`}>
+          <Link to={`concerts/${nextConcert.frontmatter.path}`}>
             <div className={styles.info}>
               <h1 className={styles.title}>{title}</h1>
               <div className={styles.subtitle}>
