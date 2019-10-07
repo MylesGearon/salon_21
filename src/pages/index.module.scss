@@ -7,19 +7,15 @@
   min-width: 100%;
 }
 
-.date-container {
-  position: absolute;
-  bottom: calc(100px - 4em);
-  left: 1em;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
 .title-container {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
+
   position: absolute;
   right: 0;
   bottom: 100px;
+
   max-width: 90%;
   min-width: 80%;
 
@@ -29,37 +25,36 @@
 
 .info {
   margin: 12px;
-  * {
-    color: white;
-  }
 }
 
 .title {
   font-size: 2.4em;
   margin: 0;
-  color: white;
 }
 
-.buy-link {
+.date-info-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 
+  width: 4em;
+
   background-color: $accent-yellow;
   margin: 0;
-  padding: 0 12px;
+  padding: 12px;
 
   color: white;
   font-size: 1.2em;
 }
 
-@include media(">=400px") {
-  .buy-link {
-    min-width: 110px;
-    padding: 0 12px;
-  }
+.date {
+  margin: 0;
+}
+
+.concert-link-icon {
+  font-size: 2em;
+  margin: -.2em -.5em -.2em -.2em;
 }
 
 @include media(">=tablet") {
@@ -87,11 +82,7 @@
     padding: 0 0 10px 0;
   }
 
-  .details-indicator {
-    font-size: 1em;
-  }
-
-  .buy-link {
+  .date-info-container {
     min-width: 140px;
   }
 }
