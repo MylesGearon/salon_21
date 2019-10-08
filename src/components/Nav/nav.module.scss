@@ -14,8 +14,7 @@ $nav-background-z-index: 3;
   top: calc(#{$mobile-nav-height * 1px} - 100vh);
   left: 0;
 
-  background-image: url('../../assets/background-texture.jpg');
-  background-repeat: repeat;
+  @include background-texture('teal');
 
   z-index: $nav-background-z-index;
 

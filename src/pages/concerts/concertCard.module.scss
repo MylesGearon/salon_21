@@ -15,8 +15,7 @@ $default-margin: 15;
 
   overflow: hidden;
 
-  background-image: url('../../assets/background-texture.jpg');
-  background-repeat: repeat;
+  @include background-texture('teal');
 }
 
 .img {

@@ -23,3 +23,8 @@ $input-button-height: 40;
     box-shadow: 0 0 5px gray;
   }
 }
+
+@mixin background-texture($color) {
+  background-image: url('/#{$color}-background.jpg');
+  background-repeat: repeat;
+}
