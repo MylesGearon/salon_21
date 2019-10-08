@@ -148,7 +148,7 @@ $fixed-footer-height: $input-button-height + 30;
 .buy-button {
   @include button-defaults;
   background-color: black;
-  color: black;
+  color: white;
   min-width: 150px;
 }
 
@@ -223,6 +223,7 @@ $fixed-footer-height: $input-button-height + 30;
 
   .buy-button {
     @include background-texture('gold');
+    color: black;
   }
 
   .buy-button-footer {
