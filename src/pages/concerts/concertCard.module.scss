@@ -106,6 +106,14 @@ $default-margin: 15;
   .link-wrapper {
     min-width: 140px;
   }
+
+  .container {
+    min-height: 350px;
+  }
+
+  .img {
+    max-height: none;
+  }
 }
 
 @include media(">=desktop") {
