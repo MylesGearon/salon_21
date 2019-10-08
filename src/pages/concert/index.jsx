@@ -35,7 +35,6 @@ export default ({ data, path }) => {
   const markdownParser = new showdown.Converter();
   const programNotesHtml = markdownParser.makeHtml(programNotes);
   const showBuyButton = parsedDate.isAfter();
-  console.log(showBuyButton)
 
   return (
     <Fragment>

@@ -49,7 +49,9 @@ const ConcertIndex = ({ data, path }) => {
       });
   }, [false]);
 
-  const groupedConcerts = groupConcertsByMonth(sortConcertsByDate(data.allMarkdownRemark.edges));
+  const futureConcerts = data.allMarkdownRemark.edges
+    .filter(edge => moment(edge.node.frontmatter.datetime).isAfter());
+  const groupedConcerts = groupConcertsByMonth(sortConcertsByDate(futureConcerts));
   return (
     <Fragment>
       <Helmet><title>Concerts</title></Helmet>
