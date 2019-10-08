@@ -34,6 +34,8 @@ export default ({ data, path }) => {
 
   const markdownParser = new showdown.Converter();
   const programNotesHtml = markdownParser.makeHtml(programNotes);
+  const showBuyButton = parsedDate.isAfter();
+  console.log(showBuyButton)
 
   return (
     <Fragment>
@@ -60,11 +62,15 @@ export default ({ data, path }) => {
         <div className={styles.bodyContainer}>
           <div className={styles.body}>
             <div className={styles.locationCol}>
-              <a href={ticketLink} target="_blank" className={styles.desktopBuyLink}>
-                <button className={styles.buyButton}>
-                  Buy Now
-                </button>
-              </a>
+              {
+                showBuyButton ? (
+                  <a href={ticketLink} target="_blank" className={styles.desktopBuyLink}>
+                    <button className={styles.buyButton}>
+                      Buy Now
+                    </button>
+                  </a>
+                ) : null
+              }
               <DateContainer className={styles.dateContainer} date={parsedDate} />
               <p className={styles.timeAndLocation}>{parsedDate.format('MMMM Do YYYY h:ssA')}</p>
               <p className={styles.address}>{locationTitle}<br />{address1}<br />{address2}</p>
@@ -100,11 +106,15 @@ export default ({ data, path }) => {
             <FiChevronsLeft />
             <h4 className={styles.concertsLinkText}>View All<br />Concerts</h4>
           </Link>
-          <a href={ticketLink} target="_blank" className={styles.buyLink}>
-            <button className={styles.buyButton}>
-              Buy Now
-            </button>
-          </a>
+            {
+              showBuyButton ? (
+                <a href={ticketLink} target="_blank" className={styles.buyLink}>
+                  <button className={styles.buyButton}>
+                    Buy Now
+                  </button>
+                </a>
+              ) : null
+            }
         </div>
       </AppContainer>
     </Fragment>

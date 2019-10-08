@@ -17,6 +17,7 @@ $input-button-height: 40;
 
   transition: box-shadow .5s;
   &:hover {
+    cursor: pointer;
     box-shadow: 0 0 5px gray;
   }
 }
