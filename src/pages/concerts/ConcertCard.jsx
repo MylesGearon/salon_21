@@ -23,6 +23,8 @@ const ConcertCard = ({concert}) => {
     }
   } = concert;
 
+  const showBuyButton = moment(datetime).isAfter();
+
   return (
     <div className={styles.container}>
       <div>
@@ -53,11 +55,16 @@ const ConcertCard = ({concert}) => {
               Details
             </button>
           </Link>
-          <a href={ticketLink} target="_blank" className={styles.linkWrapper}>
-            <button  className={[styles.button, styles.buyButton].join(' ')}>
-              Buy Now
-            </button>
-          </a>
+
+          {
+            showBuyButton ? (
+              <a href={ticketLink} target="_blank" className={styles.linkWrapper}>
+                <button  className={[styles.button, styles.buyButton].join(' ')}>
+                  Buy Now
+                </button>
+              </a>
+            ) : null
+          }
         </div>
       </div>
     </div>
