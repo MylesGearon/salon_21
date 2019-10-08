@@ -14,7 +14,7 @@ $header-height: 60;
   height: $header-height * 1px;
   width: 100%;
 
-  background-color: $accent-yellow;
+  @include background-texture('gold');
   box-shadow: 0 0 10px black;
 }
 

@@ -1,6 +1,3 @@
-$primary-blue: #92C6C4;
-$accent-yellow: #FFCA6A;
-$accent-pink: #FBCCCF;
 $neutral-gray: #D3D3D3;
 $dark-gray: #5A5A5A;
 $background-gray: #EEE;
@@ -25,6 +22,10 @@ $input-button-height: 40;
 }
 
 @mixin background-texture($color) {
+  @if $color == 'gold' {
+    filter: saturate(1.25);
+  }
+
   background-image: url('/#{$color}-background.jpg');
   background-repeat: repeat;
 }

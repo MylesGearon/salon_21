@@ -36,7 +36,8 @@ $height: 28;
   height: $height * 1px;
   font-size: 0.8rem;
   margin: 0;
-  background: $accent-yellow;
+
+  @include background-texture('gold');
   color: black;
 }
 

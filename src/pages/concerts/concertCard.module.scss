@@ -94,7 +94,7 @@ $default-margin: 15;
   }
 
   .buy-button {
-    background: $accent-yellow;
+    @include background-texture('gold');
   }
 }
 

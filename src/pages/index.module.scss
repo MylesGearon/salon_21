@@ -40,16 +40,17 @@
 
   width: 4em;
 
-  background-color: $accent-yellow;
   margin: 0;
   padding: 12px;
 
-  color: white;
+  @include background-texture('gold');
+  color: black;
   font-size: 1.2em;
 }
 
 .date {
   margin: 0;
+  filter: brightness(1);
 }
 
 .concert-link-icon {
