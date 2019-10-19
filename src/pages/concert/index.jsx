@@ -95,7 +95,7 @@ export default ({ data, path }) => {
             <div className={styles.sponsorsContainer}>
               <h3 className={styles.sponsorsTitle}>Sponsored By</h3>
               <div className={styles.sponsorsLogosContainer}>
-                {sponsors.map(sponsor => <Img className={styles.sponsorLogo} fluid={sponsor.logo.childImageSharp.fluid} />)}
+                {sponsors.map(sponsor => <Img className={styles.sponsorLogo} objectFit="scaleDown" fixed={sponsor.logo.childImageSharp.fixed} />)}
               </div>
             </div>
           </div>
@@ -159,8 +159,8 @@ export const query = graphql`
           title
           logo {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
+              fixed(width: 100) {
+                ...GatsbyImageSharpFixed_withWebp_noBase64
               }
             }
           }

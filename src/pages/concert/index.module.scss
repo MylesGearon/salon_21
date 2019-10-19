@@ -100,6 +100,8 @@ $fixed-footer-height: $input-button-height + 30;
 .sponsors-logos-container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin: 0 -20px;
 
   & > * {
     flex-grow: 1;
@@ -108,6 +110,7 @@ $fixed-footer-height: $input-button-height + 30;
 
 .sponsor-logo {
   max-width: 100px;
+  margin: 10px;
 }
 
 .buy-button-footer{
