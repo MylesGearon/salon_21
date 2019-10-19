@@ -62,7 +62,7 @@ const Nav = props => {
               <a target="_blank" href="https://facebook.com/salon21cincinnati">
                 <FaFacebookSquare className={styles.externalLinkIcon + ' ' + styles.facebookIcon}/>
               </a>
-              <a target="_blank" href="https://www.instagram.com/salon21cincy/"><FaInstagram className={styles.externalLinkIcon + ' ' + styles.instaIcon}/></a>
+              <a target="_blank" href="https://www.instagram.com/salon21cincy/" className={styles.externalLink}><FaInstagram className={styles.externalLinkIcon + ' ' + styles.instaIcon}/></a>
               <a className={styles.externalLinkIcon + ' ' + styles.emailIcon} target="_blank" href="mailto:bonjour@salon21.org">
                 <FiMail className={styles.externalLinkIcon}/>
               </a>

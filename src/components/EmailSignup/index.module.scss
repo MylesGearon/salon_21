@@ -1,48 +1,13 @@
 @import '../../../node_modules/include-media/dist/_include-media.scss';
 @import '../../styles/variables';
 
-$height: 28;
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-end;
-
-  width: 175px;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.input {
-  width: 100%;
-  height: $height * 1px;
-  border: none;
-  text-align: center;
-  font-weight: bolder;
-}
-
-::placeholder {
-  color: $neutral-gray;
-}
-
-.thank-you {
-  margin: 0;
-}
-
-.submit {
+.open-modal-button {
   @include button-defaults;
-  height: $height * 1px;
-  font-size: 0.8rem;
-  margin: 0;
-
   @include background-texture('gold');
-  color: black;
-}
 
-@include media(">=tablet") {
-  .container {
-    padding: 10px 0 ;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  font-family: 'Mission Gothic', 'Carrios Gothic', 'Arial', 'sans-serif';
 }
