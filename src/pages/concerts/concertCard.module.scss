@@ -39,14 +39,14 @@ $default-margin: 15;
     position: absolute;
     right: 0;
     min-width: 40%;
-    max-width: 80%;
+    max-width: 90%;
 
     transform: translateY(-130%);
 
     text-align: left;
     color: white;
     background-color: black;
-    padding: 15px;
+    padding: 8px;
 
     .title {
       max-width: 100%;
@@ -103,6 +103,11 @@ $default-margin: 15;
 }
 
 @include media(">=tablet") {
+  .title-positioner .title-container {
+    padding: 12px;
+    max-width: 80%;
+  }
+
   .link-wrapper {
     min-width: 140px;
   }
@@ -117,6 +122,10 @@ $default-margin: 15;
 }
 
 @include media(">=desktop") {
+  .title-positioner .title-container {
+    padding: 15px;
+  }
+
   .container {
     max-width: 850px;
   }
