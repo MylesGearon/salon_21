@@ -6,7 +6,7 @@ ticketLink: 'http://www.eventbrite.com/e/negro-melodies-of-america-tickets-70347
 locationTitle: Weston Art Gallery
 address1: 650 Walnut St
 address2: 'Cincinnati, OH 45202'
-landscapeImage: /assets/facebook-ad_negromelodies.jpg
+landscapeImage: /assets/2.27.20-negro-melodies-vert-crop.jpeg
 portraitImage: /assets/2.27.20-negro-melodies-vert.jpeg
 artists:
   - instrument: piano
@@ -31,3 +31,4 @@ programNotes: >-
   Taylor’s 24 Negro Melodies as well as other Black American composers who have
   arranged Spirituals for solo piano.
 ---
+
