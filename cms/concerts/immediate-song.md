@@ -1,5 +1,5 @@
 ---
-title: Immediate Song
+title: Immediate Song - Cancelled
 datetime: 2020-05-21T23:00:00.000Z
 path: immediate-song
 ticketLink: 'http://www.eventbrite.com/e/immediate-song-tickets-70347877395'
@@ -30,3 +30,4 @@ programNotes: >-
   Tombaugh and pianist Jill Jantzen as they present settings of poems from
   Immediate Song by contemporary composers Steven Weimer and Ellen Harrison.
 ---
+
