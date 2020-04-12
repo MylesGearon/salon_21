@@ -13,7 +13,7 @@ const AboutPage = ({ data, path }) => {
       </Helmet>
       <AppContainer currentPath={path}>
         <div className={styles.body}>
-          <h1>About Us</h1>
+          <h1>{page.frontmatter.title}</h1>
           <div className={styles.youtubeContainer}>
             <iframe
               className={styles.youtubeIframe}
@@ -39,6 +39,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default AboutPage;

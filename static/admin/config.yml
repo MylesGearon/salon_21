@@ -16,6 +16,12 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
+      - label: "Support Page"
+        name: "support"
+        file: "cms/pages/support.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
 
   - name: concerts
     label: Concerts
