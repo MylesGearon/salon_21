@@ -7,7 +7,11 @@ Salon 21: Petite Piano Concerts is a 501(3)(c) non-profit organization. We belie
 
 ### Thank You!
 
-Themusicminions
+Maxim Brumbach,\* Richard and Rev. Rhoda Brumfield, Dennis Burger, Jo-Ann Caudill, Tom Davis, Dr. Steve Danzer and Keri Kaeding, Bill and Dolly Dolle, Lorie Eckert, Michael Frabetti, Annie Darlin Gordon, Josh Hobson, Jill Jantzen,\* John and Marge Jantzen, Marie Kneuven, Laura Kremer, Vera Long, Christine McKenzie, Michael Moore, Jaclyn Mundstock,\* Katie Personke,\* Shawn and Bill Personke, Matt Rupe*, Julia and Tony Saldanha, Themusicminions, Ellen Rogers, Tom Tierney, Randi Solomon
+
+##### \*Designates Salon 21 Board Members
+
+``
 
 #### Services
 
