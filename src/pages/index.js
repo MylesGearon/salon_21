@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from "react"
+import React, { Fragment } from "react"
 import _ from 'lodash';
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"

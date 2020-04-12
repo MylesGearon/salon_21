@@ -7,6 +7,16 @@ media_folder: cms/assets
 public_folder: assets
 
 collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "cms/pages/about.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+
   - name: concerts
     label: Concerts
     folder: cms/concerts
