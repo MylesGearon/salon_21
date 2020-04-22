@@ -10,8 +10,6 @@ landscapeImage: /assets/facebook-ad_artofpiano.jpg
 portraitImage: /assets/4.23.20-art-of-the-piano-vert.jpg
 artists:
   - instrument: piano
-    name: Simon Karakulidi
-  - instrument: piano
     name: Daria Tudor
 programItems:
   - composer: TBA
@@ -22,7 +20,8 @@ sponsors:
   - logo: /assets/art-of-the-piano-logo.png
     title: Art of the Piano
 programNotes: >-
-  CONCERT UPDATE:\
+  CONCERT UPDATE:
+
 
   Join Salon 21 and Art of the Piano in presenting a special virtual concert with 2019 Enlight Prize winner Daria Tudor on Thursday, April 23rd at 7pm.
 
