@@ -1,6 +1,8 @@
 ---
 title: Support Salon 21
 ---
+### \#PetitePianoConnections Campaign!
+
 Salon 21 is a series of intimate piano concerts, creating an environment that brings together artists and music lovers through piano music. Despite the current need for social distancing and season cancellation, we want to celebrate our Salon 21 community through shared stories and virtual performances!
 
 Join our #PetitePianoConnections campaign during the month of May as we all turn to music to find solace and joy during these uncertain times. Get to know the faces of Salon 21 - artists from past seasons, patrons, and life-long piano lovers who find our concerts to be their “great escape.” Learn what Salon 21 is all about through these inspiring stories and performances, and become a member of our community with a gift today.
