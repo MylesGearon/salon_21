@@ -1,9 +1,17 @@
 ---
 title: Support Salon 21
 ---
+Salon 21 is a series of intimate piano concerts, creating an environment that brings together artists and music lovers through piano music. Despite the current need for social distancing and season cancellation, we want to celebrate our Salon 21 community through shared stories and virtual performances!
+
+Join our #PetitePianoConnections campaign during the month of May as we all turn to music to find solace and joy during these uncertain times. Get to know the faces of Salon 21 - artists from past seasons, patrons, and life-long piano lovers who find our concerts to be their “great escape.” Learn what Salon 21 is all about through these inspiring stories and performances, and become a member of our community with a gift today.
+
+
+
 ### HOW CAN YOU GET INVOLVED?
 
 Salon 21: Petite Piano Concerts is a 501(3)(c) non-profit organization. We believe that classical music is for everyone, therefore all concerts are free of charge with a $15 suggested donation. Become more involved with Salon 21: Petite Piano Concerts by making your charitable contribution today. Help us continue presenting up-close and personal piano concerts!
+
+
 
 ### Thank You!
 
