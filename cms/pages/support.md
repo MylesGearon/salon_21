@@ -1,7 +1,7 @@
 ---
 title: Support Salon 21
 ---
-### Click HERE to support our #PetitePianoConnections Campaign!
+### Click [HERE](https://charity.gofundme.com/o/en/campaign/salon-21-petite-piano-connections) to support our #PetitePianoConnections Campaign!
 
 ![Give a gift by visiting https://charity.gofundme.com/o/en/campaign/salon-21-petite-piano-connections](assets/artboard-9annualannouncements.jpg "May is dedicated to our #PetitePianoConnections Campaign!")
 
