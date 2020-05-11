@@ -1,9 +1,9 @@
 ---
 title: Support Salon 21
 ---
-# [\#PetitePianoConnections](<https://charity.gofundme.com/o/en/campaign/salon-21-petite-piano-connections>) Campaign!
+### Click HERE to support our #PetitePianoConnections Campaign!
 
-
+![Give a gift by visiting https://charity.gofundme.com/o/en/campaign/salon-21-petite-piano-connections](assets/artboard-9annualannouncements.jpg "May is dedicated to our #PetitePianoConnections Campaign!")
 
 Salon 21 is a series of intimate piano concerts, creating an environment that brings together artists and music lovers through piano music. Despite the current need for social distancing and season cancellation, we want to celebrate our Salon 21 community through shared stories and virtual performances!
 
