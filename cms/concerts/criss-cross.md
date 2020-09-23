@@ -20,17 +20,15 @@ sponsors:
   - title: Elementz
     logo: assets/elementz-logo-png.png
 programNotes: >-
-  Criss-Crossis a multi-genre collaboration that mixes the structure of
+  *Criss-Cross* is a multi-genre collaboration that mixes the structure of
   classical music with the beats of hip-hop and free improvisation. NYC-based
   pianist Mikael Darmanie joins forces with local beatmaker Alex Stallings, aka
   “Stallitix,” Executive Director of Thrive presented by Elementz, to create an
   inspired dialogue between rhythm and music.
 
 
-
-
   Community Partners:
 
 
-  Elementz
+  For more information on Thrive presented by Elementz, visit <https://elementz.org/>
 ---
