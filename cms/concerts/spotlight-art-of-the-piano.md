@@ -20,12 +20,10 @@ sponsors:
 programNotes: >-
   We continue to celebrate Salon 21’s partnership with Art of the Piano, an
   internationally recognized music festival for aspiring pianists created and
-  led by pianist Awadagin Pratt.Each year, an Enlight Prize is given to two
+  led by pianist Awadagin Pratt. Each year, an Enlight Prize is given to two
   outstanding pianists who best represent the spirit of the festival. We are
   thrilled to host one of the 2018 winners Simon Karakulidi.
 
 
-
-
-  For more information about the Art of the Piano Festival, visit <https://artofthepiano.org/>
+  For more information about the Art of the Piano Festival, visit <https://artofthepiano.org/>.
 ---
