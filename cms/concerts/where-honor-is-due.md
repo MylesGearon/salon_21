@@ -12,8 +12,18 @@ artists:
   - name: Donald Lee, III
     instrument: piano
 programItems:
-  - title: TBA
-    composer: TBA
+  - title: "Prelude and Fugue in C Major, Book 2  "
+    composer: J.S. Bach
+  - title: "Toccata  "
+    composer: "Coleridge-Taylor Perkinson  "
+  - title: "Azuretta "
+    composer: Regina Harris Baiocchi
+  - title: "Liszten, My Husband is not a Hat!   "
+    composer: Regina Harris Baiocchi
+  - title: Ballade no. 2
+    composer: "F. Liszt "
+  - title: Sonata in E Minor
+    composer: Florence Price
 programNotes: Pianist Donald Lee, III pays tribute to Black composers in his
   powerful program, *Where Honor is Due*. Lee, an Assistant Professor of Piano
   at Kentucky State University, will play pieces by Florence Price,
