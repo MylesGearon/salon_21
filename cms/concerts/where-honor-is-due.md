@@ -15,8 +15,8 @@ programItems:
   - title: TBA
     composer: TBA
 programNotes: Pianist Donald Lee, III pays tribute to Black composers in his
-  powerful program,Where Honor is Due. Lee, an Assistant Professor of Piano at
-  Kentucky State University, will play pieces by Florence Price,
+  powerful program, *Where Honor is Due*. Lee, an Assistant Professor of Piano
+  at Kentucky State University, will play pieces by Florence Price,
   Coleridge-Taylor Perkinson, and Regina Harris Baiocchi in dialogue with
   canonic works by J.S. Bach and Franz Liszt.
 ---
