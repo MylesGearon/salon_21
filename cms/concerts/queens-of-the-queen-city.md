@@ -27,7 +27,5 @@ programNotes: >-
   unforgettable ode to Cincinnati’s rich musical history.
 
 
-
-
-  For more information on Queen City Cabaret, visit their website <https://www.queencitycabaretcincy.com/>
+  For more information on Queen City Cabaret, visit <https://www.queencitycabaretcincy.com/>.
 ---
