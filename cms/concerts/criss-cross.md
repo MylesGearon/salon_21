@@ -11,6 +11,8 @@ portraitImage: assets/salon21website-tall20-21announcement.jpg
 artists:
   - name: Mikael Darmanie
     instrument: piano
+  - name: Stallitix
+    instrument: beatmaker
 programItems:
   - title: TBA
     composer: TBA
