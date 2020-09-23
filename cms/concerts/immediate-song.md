@@ -14,8 +14,10 @@ artists:
   - name: Jill Jantzen
     instrument: piano
 programItems:
-  - title: TBA
-    composer: TBA
+  - title: Nothing Written Real
+    composer: Steve Weimer
+  - title: The Promise Song
+    composer: Ellen Harrison
 programNotes: "*Immediate Song* is a combination concert and poetry reading
   inspired by University of Cincinnati emeritus professor Don Bogen’s latest
   book with the same title. *Immediate Song* is anchored in brief lyric poems,
