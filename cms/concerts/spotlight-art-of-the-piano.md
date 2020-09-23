@@ -15,7 +15,7 @@ programItems:
   - title: TBA
     composer: TBA
 sponsors:
-  - title: Community Partner
+  - title: Art of the Piano
     logo: assets/art-of-the-piano-logo.png
 programNotes: >-
   We continue to celebrate Salon 21’s partnership with Art of the Piano, an
