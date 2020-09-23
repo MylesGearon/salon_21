@@ -1,6 +1,6 @@
 ---
 title: Queens of the Queen City
-datetime: 2020-09-23T23:26:42.039Z
+datetime: 2021-02-26T00:00:00.000Z
 path: queens-of-the-queen-city
 ticketLink: https://www.eventbrite.com/e/queens-of-the-queen-city-tickets-122230880855
 locationTitle: Online
