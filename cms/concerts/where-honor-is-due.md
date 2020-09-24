@@ -6,8 +6,8 @@ ticketLink: https://www.eventbrite.com/e/where-honor-is-due-tickets-122137208679
 locationTitle: Online
 address1: Concert link will be sent out the day of event.
 address2: " Check your email."
-landscapeImage: assets/salon21website-picture20-21announcement.jpg
-portraitImage: assets/salon21website-tall20-21announcement.jpg
+landscapeImage: /assets/salon21website-picture20-21announcement.jpg
+portraitImage: /assets/salon21website-tall20-21announcement.jpg
 artists:
   - name: Donald Lee, III
     instrument: piano

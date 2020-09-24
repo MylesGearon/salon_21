@@ -6,8 +6,8 @@ ticketLink: https://www.eventbrite.com/e/queens-of-the-queen-city-tickets-122230
 locationTitle: Online
 address1: "Concert link will be sent out the day of event. "
 address2: Check your email.
-landscapeImage: assets/salon21website-picture20-21announcement.jpg
-portraitImage: assets/salon21website-tall20-21announcement.jpg
+landscapeImage: /assets/salon21website-picture20-21announcement.jpg
+portraitImage: /assets/salon21website-tall20-21announcement.jpg
 artists:
   - name: Sarah Folsom
     instrument: vocalist
@@ -18,7 +18,7 @@ programItems:
     composer: TBA
 sponsors:
   - title: "Queen City Cabaret "
-    logo: assets/queen-city-cabaret-2.jpeg
+    logo: /assets/queen-city-cabaret-2.jpeg
 programNotes: >-
   *Queens of the Queen* City features songs recorded by singers of the
   1950s-1970s, each with a connection to the Queen City including a sampling of

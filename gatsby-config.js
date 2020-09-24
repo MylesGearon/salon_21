@@ -1,5 +1,7 @@
 module.exports = {
   plugins: [
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     { // MUST BE FIRST!!!
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -7,8 +9,6 @@ module.exports = {
         name: "uploads",
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-typography`,
       options: {

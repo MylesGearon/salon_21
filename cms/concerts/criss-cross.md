@@ -6,8 +6,8 @@ ticketLink: https://www.eventbrite.com/e/criss-cross-tickets-122232367301
 locationTitle: Online
 address1: Concert link will be sent out the day of event.
 address2: Check your email.
-landscapeImage: assets/salon21website-picture20-21announcement.jpg
-portraitImage: assets/salon21website-tall20-21announcement.jpg
+landscapeImage: /assets/salon21website-picture20-21announcement.jpg
+portraitImage: /assets/salon21website-tall20-21announcement.jpg
 artists:
   - name: Mikael Darmanie
     instrument: piano
@@ -18,7 +18,7 @@ programItems:
     composer: TBA
 sponsors:
   - title: Elementz
-    logo: assets/elementz-logo-png.png
+    logo: /assets/elementz-logo-png.png
 programNotes: >-
   *Criss-Cross* is a multi-genre collaboration that mixes the structure of
   classical music with the beats of hip-hop and free improvisation. NYC-based

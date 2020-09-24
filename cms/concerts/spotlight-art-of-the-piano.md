@@ -6,8 +6,8 @@ ticketLink: https://www.eventbrite.com/e/spotlight-art-of-the-piano-tickets-1222
 locationTitle: Online
 address1: "Concert link will be sent out the day of event. "
 address2: Check your email.
-landscapeImage: assets/salon21website-picture20-21announcement.jpg
-portraitImage: assets/salon21website-tall20-21announcement.jpg
+landscapeImage: /assets/salon21website-picture20-21announcement.jpg
+portraitImage: /assets/salon21website-tall20-21announcement.jpg
 artists:
   - name: Simon Karakulidi
     instrument: piano
@@ -16,7 +16,7 @@ programItems:
     composer: TBA
 sponsors:
   - title: Art of the Piano
-    logo: assets/art-of-the-piano-logo.png
+    logo: /assets/art-of-the-piano-logo.png
 programNotes: >-
   We continue to celebrate Salon 21’s partnership with Art of the Piano, an
   internationally recognized music festival for aspiring pianists created and

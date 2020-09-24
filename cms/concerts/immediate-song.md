@@ -6,8 +6,8 @@ ticketLink: https://www.eventbrite.com/e/immediate-song-tickets-122232160683
 locationTitle: Online
 address1: "Concert link will be sent out the day of event. "
 address2: Check your email.
-landscapeImage: assets/salon21website-picture20-21announcement.jpg
-portraitImage: assets/salon21website-tall20-21announcement.jpg
+landscapeImage: /assets/salon21website-picture20-21announcement.jpg
+portraitImage: /assets/salon21website-tall20-21announcement.jpg
 artists:
   - name: " Kate Tombaugh"
     instrument: mezzo-soprano
