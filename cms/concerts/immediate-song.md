@@ -13,6 +13,8 @@ artists:
     instrument: mezzo-soprano
   - name: Jill Jantzen
     instrument: piano
+  - name: Don Bogen
+    instrument: Poet
 programItems:
   - title: Nothing Written Real
     composer: Steve Weimer
