@@ -92,12 +92,14 @@ export default ({ data, path }) => {
               <h2 className={styles.programNotesTitle}>Program Notes</h2>
               <div className={styles.programNotesText} dangerouslySetInnerHTML={{__html: programNotesHtml}} />
             </div>
-            <div className={styles.sponsorsContainer}>
-              <h3 className={styles.sponsorsTitle}>Sponsored By</h3>
-              <div className={styles.sponsorsLogosContainer}>
-                {sponsors.map(sponsor => <Img className={styles.sponsorLogo} objectFit="scaleDown" fixed={sponsor.logo.childImageSharp.fixed} />)}
+            { sponsors ? (
+              <div className={styles.sponsorsContainer}>
+                <h3 className={styles.sponsorsTitle}>Sponsored By</h3>
+                <div className={styles.sponsorsLogosContainer}>
+                  {sponsors.map(sponsor => <Img className={styles.sponsorLogo} objectFit="scaleDown" fixed={sponsor.logo.childImageSharp.fixed} />)}
+                </div>
               </div>
-            </div>
+            ) : null }
           </div>
         </div>
         <div className={styles.buyButtonFooter}>
