@@ -14,7 +14,7 @@
 
   position: absolute;
   right: 0;
-  bottom: 100px;
+  bottom: 20px;
 
   max-width: 90%;
   min-width: 80%;
@@ -61,6 +61,7 @@
 @include media(">=tablet") {
   .title-container {
     min-width: 425px;
+    bottom: 100px;
   }
 
   .info {
