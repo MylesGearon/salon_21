@@ -12,9 +12,9 @@
   justify-content: space-between;
   align-items: stretch;
 
-  position: absolute;
+  position: fixed;
   right: 0;
-  bottom: 20px;
+  bottom: 5%;
 
   max-width: 90%;
   min-width: 80%;
@@ -60,8 +60,8 @@
 
 @include media(">=tablet") {
   .title-container {
+    bottom: 10%;
     min-width: 425px;
-    bottom: 100px;
   }
 
   .info {
@@ -72,7 +72,6 @@
 @include media(">=desktop") {
   .title-container {
     min-width: 600px;
-    bottom: 150px;
   }
 
   .title {

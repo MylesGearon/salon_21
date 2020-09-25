@@ -20,7 +20,7 @@ $fixed-footer-height: $input-button-height + 30;
   .title-container {
     position: absolute;
     right: 0;
-    bottom: 100px;
+    bottom: 20px;
     min-width: 60%;
 
     text-align: left;
@@ -156,6 +156,10 @@ $fixed-footer-height: $input-button-height + 30;
 }
 
 @include media(">=tablet") {
+  .title-positioner .title-positioner {
+    bottom: minmax(100px, 10%);
+  }
+
   .concerts-link {
     display: none;
   }
