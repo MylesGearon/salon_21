@@ -32,5 +32,5 @@ programNotes: >-
   Community Partners:
 
 
-  For more information on Thrive presented by Elementz, visit <https://elementz.org/>
+  For more information on Thrive and Elementz, visit <https://elementz.org/>
 ---
