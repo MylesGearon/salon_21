@@ -1,7 +1,7 @@
 module.exports = {
   plugins: [
-    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     { // MUST BE FIRST!!!
       resolve: `gatsby-source-filesystem`,
       options: {
